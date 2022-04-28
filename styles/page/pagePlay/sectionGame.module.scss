@@ -1,0 +1,220 @@
+@import '../../theme',
+        '../../helper';
+
+.section__game {
+  .container {
+    .unityWrapper {
+      border-radius: 10px;
+      // overflow: hidden;
+      position: relative;
+      transition: all .5s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      top: 0;
+      left: unset;
+      height: unset;
+      width: unset;
+      background: none;
+
+      &_fullscreen {
+        border-radius: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        background: $color-secondary-blue-75;
+        height: 100%;
+        width: 100%;
+      }
+
+      .loading {
+        @include font-face($font-nunito, $text-lg, 600);
+        color: $color-secondary-blue-75;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all .5s;
+        position: absolute;
+        z-index: 10;
+        background: linear-gradient(178.47deg, #6AACE6 -4.17%, #A0E4FD 43.96%, #F0FAF4 94.14%);
+        border-radius: 10px;
+        overflow: hidden;
+
+        width: calc(100vh * 16 / 9 - 4rem);
+        height: calc(100vw * 9 / 16 - 4rem);
+        max-width: 100%;
+        max-height: calc(100vw * 9 / 16 - 4rem);
+
+        &_fullscreen {
+          border-radius: 0;
+          width: calc(100vh * 16 / 9);
+          height: calc(100vw * 9 / 16);
+          max-height: 100vh;
+        }
+
+        .logo {
+          width: 200px;
+        }
+
+        .fact {
+          width: 60%;
+        }
+
+        .progress {
+          background: #FFFFFF;
+          justify-content: flex-start;
+          border-radius: 10px;
+          align-items: center;
+          position: relative;
+          padding: 0;
+          display: flex;
+          height: 7.5px;
+          width: 300px;
+          box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.1);
+          margin: 2rem 0 2rem 0;
+        }
+
+        .progress_value {
+          animation: load 3s normal forwards;
+          box-shadow: 0 10px 40px -10px #fff;
+          border-radius: 10px;
+          height: 7.5px;
+          width: 0;
+          // background: #FB7E49;
+          background: linear-gradient(90deg,#FB7E49,#fca580 17%,#fb7e49 34%,#fca580 51%,#fb7e49 68%,#fca580 85%,#fb7e49);
+          background-size: 300% 100%;
+          animation: progress-animation 2s linear infinite
+        }
+
+        @keyframes progress-animation {
+          0% {background-position: 100%;}
+          100% {background-position: 0;}
+        }
+      }
+
+      .topBar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        top: 0;
+        background-color: $color-secondary-blue-75;
+        padding: 0 10px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        transition: all .5s;
+
+        height: 40px;
+        width: calc(100vh * 16 / 9 - 4rem);
+        max-width: 100%;
+
+        &_fullscreen {
+          width: calc(100vh * 16 / 9);
+        }
+
+        .button {
+          @include font-face($font-G8, $text-xs, 600);
+          color:  $color-primary-white;
+          border-radius: 30px;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+        }
+      }
+    }
+  }
+}
+
+.NoCardContainer {
+  padding: 2rem;
+  width: 100%;
+  // min-width: 600px;
+  color: #ffffff;
+  .title {
+    @include font-face($font-G8, $text-2xl, 600);
+    padding: 0.5rem;
+  }
+  .subtitle {
+    @include font-face($font-nunito, $text-md, 400);
+    opacity: 0.6;
+  }
+
+  .image {
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .button {
+    padding-top: 2rem;
+    .title {
+      @include font-face($font-G8, $text-md, 600);
+      padding: 0.5rem;
+    }
+  }
+}
+
+.confirmationModal {
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .title {
+    @include font-face($font-G8, $text-2xl, 600);
+    padding: 0.5rem;
+  }
+  .subtitle {
+    @include font-face($font-nunito, $text-md, 400);
+    opacity: 0.6;
+  }
+}
+
+.desktopOnlyModal {
+  // padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+
+  .image {
+    width: 100px;
+  }
+
+  .title {
+    @include font-face($font-G8, $text-md, 600);
+    padding: 0.5rem;
+
+  }
+  .subtitle {
+    @include font-face($font-nunito, $text-md, 400);
+    // opacity: 0.6;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+@include mq($breakpoint-tablet) {
+  .section__game {
+    .container {
+      .unityWrapper {
+        .loading {
+          .fact {
+            width: 50%;
+          }
+
+          .progress {
+            width: 200px;
+          }
+        }
+      }
+    }
+  }
+}

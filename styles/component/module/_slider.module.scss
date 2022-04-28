@@ -1,0 +1,40 @@
+.swiper-container-horizontal > .swiper-pagination-bullets, 
+.swiper-pagination-custom, 
+.swiper-pagination-fraction {
+  bottom: 18px;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+
+  &-active {
+    background: $color-secondary-blue-75;
+  }
+}
+.card-label-lootbox {
+  position: absolute;
+  z-index: 10;
+  padding: 10px 20px;
+  background-color: #61C454;
+  top: 25px;
+  @include font-face($font-G8, $text-sm, 700);
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  color: #ffffff;
+  text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25);
+}
+@include mq($breakpoint-mobile) {
+  .card-label-lootbox {
+    position: absolute;
+    z-index: 10;
+    padding: 10px 20px;
+    background-color: #61C454;
+    top: 25px;
+    @include font-face($font-G8, $text-xs, 600);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    color: #ffffff;
+    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25);
+  }
+}

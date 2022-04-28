@@ -1,0 +1,131 @@
+@import '../../theme',
+        '../../helper';
+
+.section__listCard {
+  margin-bottom: 5rem;
+  .container {
+    background: linear-gradient(180deg, #CFF2FF 0%, rgba(240, 250, 244, 0) 100%);
+    border: 4px solid #E2EEF3;
+    // border-image-source: linear-gradient(180deg, #E2EEF3 0%, rgba(193, 219, 232, 0) 100%);
+    padding: 4rem;
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+
+    .bg_cloud {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .block__title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4rem;
+      h2 {
+        @include font-face($font-G8, $text-2xl, 700);
+        color: $color-secondary-blue-75;
+      }
+      .filter {
+        @include font-face($font-G8, $text-md, 600);
+        color: $color-secondary-blue-75;
+      }
+    }
+
+    .block__content {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3rem;
+
+      .item {
+        background: radial-gradient(50% 50% at 50% 50%, #1C5D79 0%, #0C353B 100%);
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(8px);
+        border-radius: 16px;
+        padding: 1.8rem;
+        max-width: 220px;
+        width: 100%;
+        position: relative;
+        
+        .listedBadge {
+          position: absolute;
+          top: 0;
+          right: 0;
+          padding: 1rem;
+          z-index: 2;
+          border-top-right-radius: 15px;
+          border-bottom-left-radius: 15px;
+          @include font-face($font-G8, $text-2xs, 600);
+          color: $color-primary-white;
+          background-color: #CE5347;
+        }
+        
+        .status {
+          &_label {
+            @include font-face($font-G8, $text-2xs, 600);
+            color: $color-primary-white;
+          }
+
+          &_value {
+            @include font-face($font-G8, $text-xs, 700);
+            color: $color-primary-white;
+          }
+        }
+
+        .button {
+          &_text {
+            @include font-face($font-G8, $text-xs, 700);
+            padding: .25rem 1rem;
+          }
+        }
+      }
+    }
+
+    .emptyState {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 2rem;
+      margin-top: 10rem;
+      margin-bottom: 10rem;
+
+      h3 {
+        @include font-face($font-G8, $text-xl, 600);
+      }
+
+      span {
+        @include font-face($font-nunito, $text-md, 300);
+      }
+    }
+  }
+}
+
+
+
+@include mq($breakpoint-tablet) {
+  .section__listCard {
+    .container {
+      padding: 2rem;
+
+      .block__content {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
+    }
+  }
+}
+
+@include mq($breakpoint-mobile-landscape) {
+  .section__listCard {
+    .container {
+      .block__content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+    }
+  }
+}

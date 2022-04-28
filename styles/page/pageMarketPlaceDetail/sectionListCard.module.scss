@@ -1,0 +1,35 @@
+@import '../../theme',
+        '../../helper';
+
+.section__listCard {
+  position: relative;
+  .container {
+    h2 {
+      @include font-face($font-G8, $text-2xl, 600);
+      color: $color-secondary-blue-75;
+    }
+    .wrapper__item {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 4rem;
+    }
+  }
+}
+
+
+@include mq($breakpoint-tablet) {
+  .section__listCard {
+    position: relative;
+    .container {
+      h2 {
+        @include font-face($font-G8, $text-2xl, 600);
+        color: $color-secondary-blue-75;
+      }
+      .wrapper__item {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 4rem;
+      }
+    }
+  }
+}

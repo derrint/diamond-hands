@@ -1,0 +1,34 @@
+{
+  "navbarMenu":[
+    {
+      "id": "feature",
+      "label": "Feature",
+      "ref": ""
+    },
+    {
+      "id": "about",
+      "label": "About",
+      "ref": ""
+    },
+    {
+      "id": "power",
+      "label": "Power",
+      "ref": ""
+    },
+    {
+      "id": "vision",
+      "label": "Purpose",
+      "ref": ""
+    },
+    {
+      "id": "screenshot",
+      "label": "Inside App",
+      "ref": ""
+    },
+    {
+      "id": "activity",
+      "label": "Impact",
+      "ref": ""
+    }
+  ]
+}

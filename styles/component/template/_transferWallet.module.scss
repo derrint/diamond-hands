@@ -1,0 +1,228 @@
+.outside-wrapper {
+  &::before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #1FA3DC;
+    opacity: 0.4;
+    filter: blur(150px);
+    border-radius: 50%;
+  }
+}
+.transfer-wrapper {
+  max-width: 450px;
+  h1 {
+    @include font-face($font-G8, $text-2xl, 700);
+    color: $color-secondary-blue-75;
+  }
+  .label {
+    @include font-face($font-nunito, $text-md, 700);
+    color: $color-secondary-blue-50;
+  }
+  input {
+    width: 100%;
+    border: 1px solid #1C5D7933;
+    padding: 1.0rem 2.0rem;
+    border-radius: 8px;
+    
+    &.error {
+      border-color: $color-primary-red;
+    }
+  }
+  input, input::-webkit-input-placeholder {
+    @include font-face($font-nunito, $text-md, 400);
+    color: $color-secondary-blue-50;
+  }
+
+  .input-box {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #1C5D7933;
+    border-radius: 8px;
+    padding: 0.0rem 2.0rem;
+    overflow: hidden;
+  }
+  .input-box .img-prefix {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    border-radius: 50%;
+  }
+  .input-box .prefix {
+    @include font-face($font-nunito, $text-md, 400);
+    color: $color-secondary-blue-50;
+  }
+  
+  .input-box input {
+    flex-grow: 1;
+    @include font-face($font-nunito, $text-md, 400);
+    color: $color-secondary-blue-50;
+    border: none;
+    outline: none;
+    // padding: 1.0rem 2.0rem;
+  }
+  input[type="checkbox"] {
+    padding: 0px !important;
+  }
+  
+  .input-box:focus-within {
+    border-color: #777;
+  }
+  .bold {
+    font-weight: 700 !important;
+  }
+  .my-address {
+    @include font-face($font-nunito, $text-md, 600);
+    color: $color-primary-blue;
+  }
+  .btn__copy {
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    object-fit: contain;
+    margin-left: .5rem;
+  }
+  .address-input {
+    padding-right: 4rem;
+  }
+  .address-valid {
+    padding-left: 4rem;
+  }
+  .valid-icon {
+    position: absolute;
+    left: 55px;
+    img {
+      width: 16px;
+    }
+  }
+  .invalid-error-info {
+    @include font-face($font-nunito, $text-sm, 600);
+    color: #CE5347;
+  }
+  .close_icon {
+    position: absolute;
+    right: 45px;
+  }
+  .approx-input {
+    position: absolute;
+    right: 55px;
+    @include font-face($font-nunito, $text-md, 700);
+    color:  rgba(12, 53, 59, 0.5);
+  }
+  .wallet-info {
+    margin-top: 10px;
+    padding: 16px;
+    @include font-face($font-nunito, $text-md, 600);
+    color: $color-secondary-blue-75;
+    background: #FFFFFF;
+    border-radius: 8px; 
+    .label {
+      @include font-face($font-nunito, $text-md, 600);
+      color: $color-secondary-blue-75;
+      margin-right: 10px;
+    }
+    .icon {
+      width: 25px;
+      height: 25px;
+      margin-right: 5px;
+    }
+    .title {
+      @include font-face($font-nunito, $text-md, 700);
+      color: $color-secondary-blue-75;
+      margin: 0px;
+    }
+  }
+  .disclamer {
+    @include font-face($font-nunito, $text-sm, 600);
+    color: rgba(12, 53, 59, 0.6);
+  }
+  .next-button {
+    min-width: 200px;
+  }
+
+  // incase in confirmation
+  .tag-confirm {
+    border: 1px solid rgba(12, 53, 59, 0.4);
+    box-sizing: border-box;
+    border-radius: 16px;
+    padding: 2px 10px;
+    @include font-face($font-G8, $text-md, 800);
+    color: rgba(12, 53, 59, 0.4);
+  }
+  .icon-container {
+    background: rgba(28, 93, 121, 0.1);
+    border-radius: 40px;
+    margin-right: 1rem;
+    .icon {
+      width: 30px;
+      height: 30px;
+      margin: 10px;
+    }
+  }
+  .amount-confirmation {
+    @include font-face($font-nunito, $text-2xl, 700);
+    color: $color-secondary-blue-50;
+  }
+  .trx-confirmation {
+    .label {
+      @include font-face($font-nunito, $text-md, 700);
+      color: $color-secondary-blue-75;
+    }
+    .value {
+      @include font-face($font-nunito, $text-md, 600);
+      color: $color-secondary-blue-50;
+    }
+    .details-container {
+      padding: 16px;
+      background: rgba(12, 53, 59, 0.05);
+      border-radius: 8px; 
+      .total {
+        @include font-face($font-nunito, $text-md, 700);
+        color: $color-secondary-blue-75;
+      }
+      .approx {
+        @include font-face($font-nunito, $text-md, 700);
+        color:  rgba(12, 53, 59, 0.5);
+      }
+    }
+    .disclamer {
+      @include font-face($font-nunito, $text-sm, 600);
+      color: rgba(12, 53, 59, 0.6);
+    }
+  }
+  .confirm-button {
+    min-width: 200px;
+  }
+  .edit-button {
+    color: #1C5D79;
+  }
+  .urltxt {
+    @include font-face($font-nunito, $text-md, 600);
+    color: $color-subsidiary-blue-25;
+  }
+  .view-on-explorer {
+    @include font-face($font-G8, $text-md, 800);
+    color: $color-subsidiary-blue-25;
+  }
+  .trx-success {
+    a {
+      border: none;
+    }
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+}

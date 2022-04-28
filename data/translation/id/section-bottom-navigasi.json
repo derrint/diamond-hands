@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "label": "Term of Conditions",
+    "href": "/term-of-condition"
+  },
+  {
+    "id": 2,
+    "label": "Privacy Policy",
+    "href": "/privacy-policy"
+  }
+]

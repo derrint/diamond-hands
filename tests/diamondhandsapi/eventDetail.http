@@ -1,0 +1,4 @@
+# Event Detail
+GET https://diamondhandsapi.candlestick.com/api/EventGet
+    ?eventId=86550797969522689
+Content-Type: application/json

@@ -1,0 +1,13 @@
+.step-progess {
+  &-wrapper {
+    width: 100%;
+    margin-bottom: 20px;
+    .c-green {
+      color: #68CC58;
+    }
+    .c-border-green {
+      --tw-border-opacity: 1;
+      border-color:  #68CC58;
+    }
+  }
+}

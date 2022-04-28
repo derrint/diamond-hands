@@ -1,0 +1,601 @@
+.header {
+  z-index: 110;
+
+  &.on-scroll {
+    background-color: $color-secondary-blue-25;
+    @include box-shadow();
+  }
+  .logo {
+    // margin-top: -7px;
+    height: 50px;
+
+    .dh-btn {
+      height: 100%;
+      display: block;
+
+      img {
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .menu {
+    gap: 0.8rem;
+
+    &--link {
+      @include font-face($font-G8, $text-sm, 700);
+      color: $color-primary-blue;
+      background: #FFFFFF4D;
+      padding: 0.8rem 1.4rem;
+      border-radius: 16px;
+      transition: all 0.5s ease;
+      margin: 0.3rem 0;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+
+      &.active {
+        color: $color-subsidiary-blue-25;
+        background-color: $color-primary-white;
+      }
+
+      .image {
+        width: 28px;
+        height: 28px;
+        object-fit: contain;
+        transition: all 0.5s ease;
+      }
+
+      .label {
+        padding-top: 0.5rem;
+      }
+
+      .highlight {
+        @include font-face($font-G8, $text-3xs, 600);
+        background: #FCF797;
+        color: rgba(12, 53, 59, 0.6);
+        border-radius: 8px;
+        padding: 2px 4px;
+        position: absolute;
+        bottom: -12px;
+        min-width: 75px;
+        text-align: center;
+      }
+
+      &:hover {
+        // color: $color-subsidiary-blue-25;
+        // background-color: $color-primary-white;
+        margin: 0;
+
+        .image {
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+
+  }
+
+  .dd-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    margin-right: 2rem;
+
+    .icon-dd {
+      height: 40px;
+      width: 40px;
+      object-fit: contain;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .dd-amount {
+      @include font-face($font-nunito, $text-sm, 700);
+      background: #0C353B60;
+      color: $color-primary-white;
+      padding: 0.5rem 1.5rem 0.5rem 3rem;
+      margin: 0 0.5rem 0 2rem;
+      border-radius: 8px;
+    }
+    .icon-plus {
+      height: 22px;
+      width: 22px;
+      object-fit: contain;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      background-color: $color-secondary-blue-50;
+      border-radius: 16px;
+      min-width: 20rem;
+      margin-top: 2rem;
+
+      &__list {
+        padding: 8px;
+      }
+
+      &__list__item {
+        margin-top: 10px;
+        padding: 12px 10px;
+        background: #F4E9A3;
+        box-shadow: 0px 2px 0px #EDB74B;
+        border-radius: 8px;
+        position: relative;
+
+        &:nth-of-type(1) {
+          margin-top: 0;
+        }
+
+        &.disabled {
+          opacity: 0.5;
+
+          .menu-profile{
+            &--link {
+              cursor: default;
+            }
+          }
+        }
+
+        .menu-profile{
+          &--link {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+
+            .icon {
+              width: 24px;
+              height: 24px;
+              object-fit: contain;
+            }
+          }
+
+          &--highlight {
+            @include font-face($font-G8, $text-xs, 500);
+            position: absolute;
+            color: $color-primary-white;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+
+  .profile {
+    display: flex;
+    align-items: center;
+    
+    .dropdown-content {
+      background-color: $color-secondary-blue-50;
+      border-radius: 2rem 0 2rem 2rem;
+      min-width: 17rem;
+      margin-top: 2rem;
+
+      &__list {
+        padding: 1.25rem 2rem;
+      }
+
+      &__list__item {
+        color: $color-primary-white;
+        font-weight: 600;
+
+        .menu-profile--link {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          gap: 1.5rem;
+
+          .icon-section {
+            display: flex;
+            .icon {
+              width: 20px;
+              height: 20px;
+              image-rendering: -webkit-optimize-contrast;
+            }
+            .badge {
+              // position:relative;
+              position: absolute;
+              @include font-face($font-G8, $text-3xs, 700);
+              top: 58px;
+              left: 30px;
+              padding: 2px 5px;
+              border-radius: 50%;
+              background: #ed4c5c;
+              color: #FFFFFF;
+            }
+          }
+        }
+      }
+    }
+    .image {
+      width: 40px;
+      @include image-cover(100%);
+      img {
+        border-radius: 50%;
+      }
+      .badge {
+        // position:relative;
+        position: absolute;
+        @include font-face($font-G8, $text-2xs, 700);
+        top: -7px;
+        right: -2px;
+        padding: 2px 5px;
+        border-radius: 50%;
+        background: #ed4c5c;
+        color: #FFFFFF;
+      }
+    }
+    .username {
+      margin-left: 1rem;
+      @include font-face($font-G8, $text-sm, 700);
+      color: $color-subsidiary-blue-25;
+    }
+  }
+
+  .signup-btn {
+    padding: 1rem 0.5rem !important;
+    @include font-face($font-G8, $text-sm, 700);
+    color: $color-primary-blue;
+    text-align: center;
+  }
+  
+  .login-btn {
+    padding: 1.2rem 1.8rem !important;
+    @include font-face($font-G8, $text-md, 700);
+    text-align: center;
+  }
+}
+.modal-failed-open-lootbox {
+  width: 700px;
+  .lootbox-name {
+    @include font-face($font-G8, $text-xl, 700);
+  }
+  .message {
+    @include font-face($font-nunito, $text-md, 400);
+    text-align: center;
+  }
+  .help {
+    @include font-face($font-G8, $text-md, 700);
+    text-align: center;
+    color: $color-primary-blue;
+  }
+}
+
+.wallet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  // height: 100vh;
+  position: fixed;
+  top: 126px;
+  right: 0;
+  z-index: 20;
+  transition: all 0.5s;
+
+  img {
+    &.icon-wallet {
+      width: 32px;
+      object-fit: contain;
+    }
+
+    &.icon-chevron {
+      width: 24px;
+      object-fit: contain;
+    }
+  }
+
+  &-trigger {
+    background: #FFFFFF80;
+    padding: 2rem 1.6rem 1.8rem 2rem;
+    @include box-shadow();
+    border-radius: 24px 0px 0px 24px;
+    width: max-content;
+  }
+
+  &-wrapper {
+    padding: 2rem;
+    min-width: 300px;
+
+    h2 {
+      @include font-face($font-G8, $text-xl, 700);
+      color: $color-secondary-blue-75;
+    }
+    .address-label {
+      @include font-face($font-nunito, $text-md, 400);
+      color: #1C5D79CC;
+    }
+    h3 {
+      @include font-face($font-nunito, $text-md, 700);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      .btn__copy {
+        cursor: pointer;
+        height: 16px;
+        width: 16px;
+        object-fit: contain;
+        margin-left: .5rem;
+      }
+    }
+  }
+
+  &-info {
+    padding: 1.6rem;
+    border: 1px solid rgba(12, 53, 59, 0.1);
+    border-radius: 16px;
+
+    &--icon {
+      width: 25px;
+      height: 25px;
+    }
+    &--label {
+      @include font-face($font-nunito, $text-md, 700);
+      color: $color-secondary-blue-75;
+    }
+
+    &--value {
+      @include font-face($font-nunito, $text-xl, 800);
+      color: $color-primary-blue;
+    }
+
+    &--symbol {
+      @include font-face($font-nunito, $text-xl, 400);
+      color: $color-secondary-blue-75;
+    }
+
+    &--action {
+      .dh-btn {
+        @include font-face($font-nunito, $text-sm, 600);
+        color: $color-primary-blue;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.6rem;
+        margin-top: 1rem;
+
+        img {
+          width: 16px;
+          object-fit: contain;
+        }
+      }
+      .no-bg-disabled {
+        background-color: #FFFFFF !important;
+        opacity: 0.5;
+      }
+    }
+  }
+  &-accordion-info {
+    padding: 1.6rem;
+    border: 1px solid rgba(12, 53, 59, 0.1);
+    border-radius: 16px;
+    cursor: pointer;
+    &--icon {
+      width: 25px;
+      height: 25px;
+    }
+    &--accordion-icon {
+    }
+    &--label {
+      @include font-face($font-nunito, $text-md, 700);
+      color: $color-secondary-blue-75;
+    }
+
+    &--value {
+      @include font-face($font-nunito, $text-xl, 800);
+      color: $color-primary-blue;
+    }
+
+    &--symbol {
+      @include font-face($font-nunito, $text-xl, 400);
+      color: $color-secondary-blue-75;
+    }
+
+    &--action {
+      .dh-btn {
+        @include font-face($font-nunito, $text-sm, 600);
+        color: $color-primary-blue;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.6rem;
+        margin-top: 1rem;
+
+        img {
+          width: 16px;
+          object-fit: contain;
+        }
+      }
+      .no-bg-disabled {
+        background-color: #FFFFFF !important;
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &-links {
+    a {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+    }
+  }
+}
+
+#fp-nav ul {
+  background: rgba(34, 34, 34, 0.25);
+  border-radius: 16px;
+  padding: 8px 0 !important;
+
+  li a span {
+    background: rgba(255, 255, 255, 0.25) !important;
+    margin: -6px 0 0 -2px !important;
+    width: 4px !important;
+    height: 12px !important;
+    border-radius: 2px !important;
+  }
+
+  li a.active span, 
+  li:hover a.active span {
+    height: 16px !important;
+    margin-top: -8px !important;
+    background: #ffffff !important;
+  }
+}
+
+
+@include mq($breakpoint-tablet-xl) {
+  .header {
+    .logo {
+      img {
+        height: 45px;
+      }
+    }
+
+    .menu {
+      gap: 0.6rem;
+  
+      &--link {
+        padding: .6rem .8rem;
+        font-size: $text-xs;
+  
+        .image {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+    .signup-btn {
+      padding: 1rem 0.5rem !important;
+      font-size: $text-xs;
+    }
+
+    .login-btn {
+      padding: 1rem 1.2rem !important;
+      font-size: $text-xs;
+    }
+  }
+}
+
+@include mq($breakpoint-tablet-landscape) {
+  .header {
+    .logo {
+      img {
+        height: 40px;
+      }
+    }
+
+    .menu {
+      gap: 0.4rem;
+  
+      &--link {
+        padding: .4rem .6rem;
+        font-size: $text-xs;
+  
+        .image {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+    .signup-btn {
+      padding: 0.4rem !important;
+      font-size: $text-2xs;
+    }
+
+    .login-btn {
+      padding: 0.6rem 0.8rem !important;
+      font-size: $text-2xs;
+    }
+
+    .dd-info, .username {
+      display: none;
+    }
+  }
+
+  .wallet {
+    top: 90px;
+  }
+}
+
+@include mq($breakpoint-tablet) {
+  .header {
+    .container {
+      
+      .menu {
+        display: none;
+
+        &--link {
+          gap: 2rem;
+          flex-direction: row;
+          justify-content: flex-start;
+          margin-bottom: 1rem;
+
+          .label {
+            padding-top: 0;
+          }
+
+          .highlight {
+            position: unset;
+            bottom: unset;
+          }
+
+        }
+
+        &.menu-mobile-expanded {
+          display: block;
+          gap: 2rem;
+          // grid-template-columns: repeat(3, 1fr);
+          // grid-template-rows: repeat(3, 1fr);
+          position: fixed;
+          width: 100%;
+          height: calc(100vh - 30px);
+          top: 30px;
+          left: 0;
+          background-color: $color-secondary-blue-25;
+          overflow: hidden;
+          margin-top: 2.5rem;
+          padding: 2rem;
+
+          &.on-top {
+            // height: calc(100vh - 50px);
+            // top: 50px;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+@include mq($breakpoint-mobile-landscape) {
+  .header {
+    .logo {
+      margin-top: -5px;
+      img {
+        height: 40px;
+        object-fit: contain;
+      }
+    }
+    .container {
+      
+      .menu {
+
+        &--link {
+          gap: 1.5rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,426 @@
+@import '../../theme',
+        '../../helper';
+        
+.section__information {
+  .container {
+
+    h1 {
+      @include font-face($font-G8, $text-4xl, 700);
+      color: $color-secondary-blue-75;
+    }
+    
+    .introduction {
+      width: 70%;
+      margin: 3rem auto 9rem auto; 
+
+      h1 {
+        margin-bottom: 5rem;
+      }
+
+      .content {
+        @include font-face($font-nunito, $text-lg, 500);
+        color: $color-secondary-blue-75;
+        display: grid;
+        grid-template-columns: 60% 40%;
+        gap: 5rem;
+
+        img {
+          max-width: 240px;
+        }
+
+        .contract {
+          display: flex;
+          flex-direction: row;
+          font-size: $text-sm;
+          word-break: break-all;
+        }
+      }
+    }
+
+    .functionality {
+      width: 70%;
+      margin: 3rem auto 12rem auto; 
+
+      h1 {
+        margin-bottom: 5rem;
+      }
+
+      .content {
+        @include font-face($font-nunito, $text-lg, 500);
+        color: $color-secondary-blue-75;
+        display: grid;
+        grid-template-columns: 35% 30% 35%;
+        gap: 2rem;
+        .imgContentOnTop {
+          display: none;
+        }
+        .leftDesc {
+          text-align: right;
+          margin-right: 2rem;
+        }
+        img {
+          max-width: 240px;
+        }
+
+        h2 {
+          @include font-face($font-G8, $text-lg, 700);
+          margin-bottom: 1.2rem;
+          margin-top: 3rem;
+
+          &:nth-of-type(1) {
+            margin-top: 0;
+          }
+        }
+
+        span {
+          @include font-face($font-nunito, $text-md, 400);
+          color: #0C353B99;
+        }
+      }
+    }
+
+
+    .finance {
+      width: 75%;
+      margin: 3rem auto 12rem auto; 
+
+      h1 {
+        margin-bottom: 1rem;
+      }
+
+      h3 {
+        @include font-face($font-nunito, $text-lg, 500);
+        margin-bottom: 6rem;
+      }
+
+      .content {
+        @include font-face($font-nunito, $text-lg, 500);
+        color: $color-secondary-blue-75;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5rem;
+
+        .item {
+          text-align: center;
+
+          img {
+            max-height: 56px;
+          }
+  
+          h2 {
+            @include font-face($font-G8, $text-lg, 600);
+            margin-bottom: 1.2rem;
+            margin-top: 3rem;
+          }
+  
+          span {
+            @include font-face($font-nunito, $text-md, 400);
+            color: #0C353B99;
+          }
+        }
+
+      }
+    }
+  
+    .whitepaper {
+      margin: 3rem auto 12rem auto; 
+      background: #F0DEB0;
+      border-radius: 32px;
+      padding: 40px;
+      text-align: center;
+      @include font-face($font-nunito, $text-lg, 600);
+    }
+
+    .treasury {
+      width: 50%;
+      margin: 3rem auto 0rem auto; 
+
+      h1 {
+        margin-bottom: 1rem;
+
+        img {
+          width: 36px;
+          object-fit: contain;
+          margin-right: 2rem;
+        }
+      }
+
+      h3 {
+        @include font-face($font-nunito, $text-lg, 500);
+        margin-bottom: 6rem;
+      }
+
+      .content {
+        @include font-face($font-nunito, $text-lg, 500);
+        color: $color-secondary-blue-75;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+
+        .item {
+          text-align: center;
+          background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+          border-radius: 24px;
+          padding: 2rem;
+  
+          h2 {
+            @include font-face($font-G8, $text-2xl, 600);
+            color: $color-subsidiary-blue-25;
+            margin-bottom: 1.2rem;
+          }
+  
+          h4 {
+            @include font-face($font-G8, $text-md, 600);
+          }
+        }
+
+      }
+
+      .current {
+        background: $color-secondary-blue-50;
+        border-radius: 8px;
+        padding: 2.4rem;
+        color: $color-primary-white;
+        text-align: center;
+        margin-top: 4.8rem;
+
+        h2 {
+          @include font-face($font-G8, $text-2xl, 600);
+          margin-top: 1rem;
+        }
+
+        h4 {
+          @include font-face($font-G8, $text-md, 600);
+
+          img {
+            width: 24px;
+            object-fit: contain;
+            margin-right: 0.8rem;
+          }
+        }
+        .emptyWord {
+          @include font-face($font-nunito, $text-sm, 600);
+          opacity: 0.6;
+        }
+      }
+    }  
+    
+  }
+}
+
+
+/*
+* RESPONSIVE
+*/
+
+@include mq($breakpoint-tablet) {
+  .section__information {
+    padding-top: 0;
+    padding-bottom: 1rem;
+
+    .container {
+      width: 100%;
+
+      h1 {
+        margin-bottom: 0;
+        font-size: $text-3xl;
+
+        span {
+          img {
+            width: 72px;
+          }
+        }
+      }
+
+      .item {
+        gap: 4rem;
+        margin-bottom: 0;
+        padding: 4rem;
+
+        .block__description {
+
+          h2 {
+            font-size: $text-2xl;
+          }
+          p {
+            font-size: $text-md;
+          }
+          a {
+            font-size: $text-sm;
+          }
+        }
+
+        .block__image {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+@include mq($breakpoint-mobile) {
+  .section__information {
+    padding-top: 4rem;
+
+    .container {
+
+      .item {
+        display: block;
+        padding: 2rem 0;
+
+        .block__description {
+          width: 100%;
+        }
+
+        .block__image {
+          width: 100%;
+          padding: 4rem;
+          padding-bottom: 0;
+        }
+      }
+      .introduction {
+        text-align: center;
+        .content {
+          display: flex;
+          &:nth-of-type(odd) {
+            flex-direction: column-reverse;
+          }
+          @include font-face($font-nunito, $text-lg, 500);
+          color: $color-secondary-blue-75;
+          // grid-template-columns: repeat(1, 1fr);
+          // gap: 5rem;
+          img {
+            max-width: 240px;
+          }
+        }
+      }
+      .functionality {
+        .content {
+          @include font-face($font-nunito, $text-lg, 500);
+          color: $color-secondary-blue-75;
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          gap: 2rem;
+          .imgContentOnTop {
+            display: block;
+            margin: auto;
+          }
+          .imgContentOnCenter {
+            display: none;
+          }
+          .leftDesc {
+            text-align: center;
+            margin-right: 0rem;
+          }
+          .rightDesc {
+            text-align: center
+          }
+        }
+      }
+      .finance {
+        width: 100%;
+        margin: 3rem auto 12rem auto; 
+        .content {
+          @include font-face($font-nunito, $text-lg, 500);
+          color: $color-secondary-blue-75;
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          gap: 5rem;
+  
+          .item {
+            text-align: center;
+  
+            img {
+              max-height: 56px;
+            }
+    
+            h2 {
+              @include font-face($font-G8, $text-lg, 600);
+              margin-bottom: 1.2rem;
+              margin-top: 3rem;
+            }
+    
+            span {
+              @include font-face($font-nunito, $text-md, 400);
+              color: #0C353B99;
+            }
+          }
+  
+        }
+      }
+      .treasury {
+        width: 100%;
+        margin: 3rem auto 0rem auto; 
+  
+        h1 {
+          margin-bottom: 1rem;
+  
+          img {
+            width: 36px;
+            object-fit: contain;
+            margin-right: 2rem;
+          }
+        }
+  
+        h3 {
+          @include font-face($font-nunito, $text-lg, 500);
+          margin-bottom: 6rem;
+        }
+  
+        .content {
+          @include font-face($font-nunito, $text-lg, 500);
+          color: $color-secondary-blue-75;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 3rem;
+  
+          .item {
+            text-align: center;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+            border-radius: 24px;
+            padding: 2rem;
+    
+            h2 {
+              @include font-face($font-G8, $text-2xl, 600);
+              color: $color-subsidiary-blue-25;
+              margin-bottom: 1.2rem;
+            }
+    
+            h4 {
+              @include font-face($font-G8, $text-md, 600);
+            }
+          }
+  
+        }
+  
+        .current {
+          background: $color-secondary-blue-50;
+          border-radius: 8px;
+          padding: 2.4rem;
+          color: $color-primary-white;
+          text-align: center;
+          margin-top: 4.8rem;
+  
+          h2 {
+            @include font-face($font-G8, $text-2xl, 600);
+            margin-top: 1rem;
+          }
+  
+          h4 {
+            @include font-face($font-G8, $text-md, 600);
+  
+            img {
+              width: 24px;
+              object-fit: contain;
+              margin-right: 0.8rem;
+            }
+          }
+          .emptyWord {
+            @include font-face($font-nunito, $text-sm, 600);
+            opacity: 0.6;
+          }
+        }
+      }  
+    }
+  }
+}

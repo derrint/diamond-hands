@@ -1,0 +1,107 @@
+@import '../../theme',
+        '../../helper';
+
+.section__listCard {
+  position: relative;
+  background: linear-gradient(178.82deg, #AFE8FD 4.19%, #3088AA 107.95%);
+  border-radius: 0px 0px 80px 80px;
+
+  .container {
+
+    h1 {
+      @include font-face($font-G8, $text-5xl, 700);
+      color: $color-primary-white;
+      text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .cardWrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4rem;
+      z-index: 2;
+
+      &::before {
+        z-index: -1;
+        content: "";
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        left: 50%;
+        bottom: 90px;
+        transform: translate(-50%, 0);
+        background: #FCF797;
+        opacity: 0.8;
+        filter: blur(150px);
+        border-radius: 50%;
+      }
+    }
+
+    .buttonWrapper {
+      a {
+        z-index: 2;
+      }
+    }
+  }
+}
+
+@include mq($breakpoint-tablet-landscape) {
+  .section__listCard {
+    padding: 3rem 0;
+
+    .container {
+      width: 90%;
+
+      .cardWrapper {
+        gap: 3rem;
+      }
+    }
+  }
+}
+
+@include mq($breakpoint-tablet) {
+  .section__listCard {
+    padding: 2rem 0;
+
+    .container {
+      width: 100%;
+
+      h1 {
+        font-size: $text-3xl;
+      }
+
+      .cardWrapper {
+        gap: 2rem;
+      }
+    }
+  }
+}
+
+@include mq($breakpoint-mobile) {
+  .section__listCard {
+    padding: 2rem;
+
+    .container {
+      h1 {
+        font-size: $text-2xl;
+      }
+
+      .cardWrapper {
+        grid-template-columns: repeat(1, 1fr);
+        &::before {
+          z-index: -1;
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 50%;
+          bottom: 90px;
+          transform: translate(-50%, 0);
+          background: #FCF797;
+          opacity: 0.8;
+          filter: blur(150px);
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+# Skin List
+GET https://diamondhandsapi.candlestick.com/api/SkinList
+    ?limit=4
+    &offset=0
+

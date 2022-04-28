@@ -1,0 +1,300 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 30% auto;
+  gap: 4rem;
+  padding-left: 0;
+  padding-right: 0;
+  
+  .block__right {
+    // padding: 2rem 2rem 2rem 0; 
+
+    h1 {
+      @include font-face($font-G8, $text-3xl, 700);
+      color: $color-secondary-blue-75;
+    }
+    p {
+      @include font-face($font-nunito, $text-md, 400);
+      color: $color-secondary-blue-75;
+    }
+    .seller_section {
+      margin-top: 5px;
+      background-color: rgba(28, 93, 121, 0.1);
+      border-radius: 50px;
+      padding: 2px 10px;
+      .seller_label {
+        @include font-face($font-G8, $text-xs, 700);
+        opacity: 0.6;
+        color: #0C353B;
+      }
+      .seller_value {
+        @include font-face($font-G8, $text-sm, 700);
+        color: $color-secondary-blue-50;
+      }
+    }
+
+    .info {
+      display: flex;
+      gap: 3rem;
+      color: $color-secondary-blue-75;
+      margin-bottom: 2rem;
+
+      &_image {
+        width: 36px;
+        height: 36px;
+        object-fit: contain;
+        margin-right: 1rem;
+      }
+      
+      &_label {
+        @include font-face($font-G8, $text-2xs, 600);
+      }
+
+      &_value {
+        @include font-face($font-G8, $text-sm, 700);
+        text-transform: capitalize;
+      }
+    }
+
+    .status {
+      background: #1C5D79;
+      border-radius: 16px;
+      margin-bottom: 2rem;
+      color: $color-primary-white;
+
+      &_label {
+        @include font-face($font-G8, $text-2xs, 600);
+      }
+
+      &_value {
+        @include font-face($font-G8, $text-xs, 700);
+      }
+
+      &_value2 {
+        @include font-face($font-G8, $text-xs, 500);
+      }
+    }
+    .status-marketplace {
+      background: #dcf1e7;
+      // opacity: 0.05;
+      border-radius: 16px;
+      margin-bottom: 2rem;
+      color: $color-secondary-blue-75;
+
+      &_label {
+        @include font-face($font-G8, $text-2xs, 600);
+      }
+
+      &_value {
+        @include font-face($font-G8, $text-xs, 800);
+      }
+
+      &_value2 {
+        @include font-face($font-G8, $text-xs, 500);
+      }
+    }
+    .sell {
+      margin-bottom: 2rem;
+    }
+    .onsell {
+      background: #CE5347;
+      border-radius: 16px;
+      margin-bottom: 2rem;
+      color: $color-primary-white;
+
+      &_label {
+        @include font-face($font-G8, $text-2xs, 600);
+        opacity: 0.6;
+      }
+
+      &_value {
+        @include font-face($font-nunito, $text-xl, 700);
+        color: #F5C451;
+      }
+    }
+    .unlisted {
+      color: #1C5D79;
+      margin-bottom: 2rem;
+      &_label {
+        @include font-face($font-G8, $text-xs, 600);
+        opacity: 0.6;
+      }
+    }
+    .priceBuy {
+      background: #0C353B;
+      border-radius: 16px;
+      padding: 1rem 1.2rem;
+      // margin-bottom: 2rem;
+      color: $color-primary-white;
+      
+      .icon-currency {
+        width: 24px;
+        height: 24px;
+        margin-right: 5px;
+      }
+      &_label {
+        @include font-face($font-G8, $text-2xs, 600);
+      }
+
+      &_value {
+        @include font-face($font-nunito, $text-2xl, 700);
+        color: #F5C451;
+      }
+      &_labelapprox {
+        @include font-face($font-nunito, $text-2xs, 600);
+        color: #FFFFFF;
+        opacity: 0.6;
+        text-align: right;
+      }
+
+      &_valueapprox {
+        @include font-face($font-nunito, $text-xs, 600);
+        color: #FFFFFF;
+        opacity: 0.6;
+        text-align: right;
+      }
+    }
+    .learn-wording {
+      .label {
+        @include font-face($font-nunito, $text-sm, 400);
+      }
+      .urltxt {
+        @include font-face($font-nunito, $text-sm, 400);
+        color: $color-subsidiary-blue-25;
+      }
+    }
+    .__react_component_tooltip {
+      border-radius: 8px;
+    }
+
+    .history {
+      &_icon {
+        width: 16px;
+        height: 16px;
+        object-fit: contain;
+        margin-right: .75rem;
+      }
+
+      &_label {
+        @include font-face($font-nunito, $text-sm, 600);
+      }
+
+      &_list {
+        @include font-face($font-nunito, $text-xs, 400);
+        list-style-type: disc;
+        padding-left: 2rem;
+      }
+    }
+
+    .card-ownership {
+      @include font-face($font-nunito, $text-sm, 600);
+    }
+    .button-lootbox {
+      padding: 1.25rem 2rem !important;
+    }
+    .button-buy {
+      // padding: 1.4rem 2rem !important;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .button-buy-wallet {
+      padding: 0.25rem 2rem !important;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+      background-color: #F5C451;
+      border: 1px solid #F5C451;
+      color: $color-primary-black;
+      @include font-face($font-nunito, $text-sm, 600);
+    }
+  }
+}
+
+.unlist-dialog {
+  padding: 2rem;
+  width: 100%;
+  min-width: 600px;
+  color: #ffffff;
+  .label {
+    color: #ffffff;
+    @include font-face($font-nunito, $text-md, 600);
+  }
+  .agreement {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    @include font-face($font-nunito, $text-sm, 600);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .label {
+      padding-left: 1.5rem;
+      @include font-face($font-nunito, $text-sm, 600);
+      opacity: 0.6;
+    }
+  }
+}
+
+@include mq($breakpoint-tablet-landscape) {
+  .wrapper {
+    gap: 3rem;
+
+    .block__right {
+  
+      h1 {
+        font-size: $text-2xl;
+      }
+      p {
+        font-size: $text-sm;
+      }
+
+      .seller_section {
+        .seller_label {
+          font-size: $text-2xs;
+        }
+        .seller_value {
+          font-size: $text-xs;
+        }
+      }
+  
+      .info {  
+        &_value {
+          font-size: $text-xs;
+        }
+      }
+
+      .priceBuy {
+        &_value {
+          font-size: $text-md;
+        }
+      }
+
+      .button-buy {
+        font-size: $text-xs;
+        padding: 0.6rem 1rem;
+      }
+
+      .onsell {  
+        &_value {
+          @include font-face($font-nunito, $text-md, 700);
+          color: #F5C451;
+        }
+      }
+    }
+  }
+
+  .unlist-dialog {
+    min-width: unset;
+  }
+}
+
+@include mq($breakpoint-tablet) {
+  .wrapper {
+    grid-template-columns: 25% auto;
+    gap: 2rem;
+  }
+}
+
+@include mq($breakpoint-mobile) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    gap: 0;
+  }
+}

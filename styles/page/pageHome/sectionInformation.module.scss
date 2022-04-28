@@ -1,0 +1,262 @@
+@import '../../theme',
+        '../../helper';
+        
+.section__information {
+  &.section__information_2 {
+    background: linear-gradient(180deg, rgba(60, 192, 81, 0.3) 0%, rgba(60, 192, 81, 0) 100%);
+    // margin-top: -10rem;
+    padding-top: 10rem;
+  }
+
+  .container {
+    width: 75%;
+
+    .coming_real_soon:target::before {
+      content: "";
+      display: block;
+      height: 128px; /* fixed header height*/
+      margin-top: -128px; /* negative fixed header height */
+    }
+
+    h4 {
+      @include font-face($font-G8, $text-2xl, 700);
+      color: $color-secondary-blue-75;
+      text-align: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+
+      span {
+        img {
+          width: 56px;
+        }
+        
+        &:nth-of-type(3) {
+          transform: scaleX(-1);
+        }
+      }
+    }
+
+    h5 {
+      @include font-face($font-G8, $text-md, 600);
+      color: $color-secondary-blue-75;
+      text-align: center;
+      margin-bottom: 5rem;
+    }
+
+    h1 {
+      @include font-face($font-G8, $text-3xl, 700);
+      color: $color-secondary-blue-75;
+      text-align: center;
+      margin-bottom: 2rem;
+
+      span {
+        color: #1271F1;
+
+        padding: 0 50px;
+        margin: 0 -50px;
+
+        background: linear-gradient(to right, #1271F1 0, white 10%, #1271F1 20%);
+        background-position: 0;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: shine 4s infinite linear;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes shine {
+        0% {background-position: -50px;}
+        60% {background-position: 520px;}
+        100% {background-position: 520px;}
+      }
+    }
+
+    .item {
+      gap: 10rem;
+      margin-bottom: 5rem;
+      &:nth-of-type(odd) {
+        flex-direction: row-reverse;
+      }
+      .block__description {
+        width: 50%;        
+        h2 {
+          @include font-face($font-G8, $text-3xl, 700);
+          color: $color-secondary-blue-75;
+        }
+        p {
+          @include font-face($font-nunito, $text-lg, 400);
+          color: $color-secondary-blue-75;
+        }
+        a {
+          @include font-face($font-G8, $text-md, 600);
+          color: $color-subsidiary-blue-25;
+
+          img {
+            width: 20px;
+          }
+        }
+      }
+      .block__image {
+        width: 40%;
+        img {
+          width: 100%;
+        }
+      }       
+    }
+    
+    .trailerVideo {
+      width: 100%;
+      height: 100%;
+      max-height: 640px;
+      height: 30vw;
+      background-image: url("https://derrint.sirv.com/Images/diamond-hands/home/feature-battle.png");
+      background-size: cover;
+      background-position: center;
+      border-radius: 15px;
+    }
+  }
+}
+
+
+/*
+* RESPONSIVE
+*/
+
+@include mq($breakpoint-tablet-landscape) {
+  .section__information {
+    padding-top: 0;
+    padding-bottom: 1rem;
+
+    &.section__information_2 {
+      padding-top: 5rem;
+    }
+
+    .container {
+      width: 100%;
+
+      .coming_real_soon:target::before {
+        height: 102px; /* fixed header height*/
+        margin-top: -102px; /* negative fixed header height */
+      }
+
+      h4 {
+        font-size: $text-xl;
+        span {
+          img {
+            width: 48px;
+          }
+        }
+      }
+
+      h1 {
+        font-size: $text-2xl;
+
+        span {
+          @keyframes shine {
+            0% {background-position: -50px;}
+            60% {background-position: 400px;}
+            100% {background-position: 400px;}
+          }
+        }
+      }
+
+      .item {
+        gap: 4rem;
+        margin-bottom: 0;
+        padding: 2rem 4rem;
+
+        .block__description {
+
+          h2 {
+            font-size: $text-2xl;
+          }
+          p {
+            font-size: $text-md;
+          }
+          a {
+            font-size: $text-sm;
+          }
+        }
+
+        .block__image {
+          width: 50%;
+        }
+      }
+
+      .trailerVideo {
+        height: 40vw;
+
+        .buttonPlay {
+          padding: 1rem 2rem !important;
+          font-size: $text-xs !important;
+        }
+      }
+    }
+  }
+}
+
+@include mq($breakpoint-tablet) {
+  .section__information {
+    .container {
+
+      .coming_real_soon:target::before {
+        height: 85px; /* fixed header height*/
+        margin-top: -85px; /* negative fixed header height */
+      }
+
+      h4 {
+        font-size: $text-lg;
+        span {
+          img {
+            width: 36px;
+          }
+        }
+      }
+      h5 {
+        font-size: $text-sm;
+      }
+
+      .item {
+        .block__description {
+          h2 {
+            font-size: $text-xl;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@include mq($breakpoint-mobile) {
+  .section__information {
+    padding-top: 4rem;
+
+    .container {
+
+      .item {
+        display: block;
+        padding: 1rem 0;
+
+        .block__description {
+          width: 100%;
+        }
+
+        .block__image {
+          width: 100%;
+          padding: 4rem;
+          // padding-top: 0;
+        }
+      }
+
+      .trailerVideo {
+        .buttonPlay {
+          padding: 0.5rem 1rem !important;
+          font-size: $text-2xs !important;
+        }
+      }
+    }
+  }
+}

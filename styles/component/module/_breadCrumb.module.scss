@@ -1,0 +1,22 @@
+.bread-crumb {
+  a {
+    display: inline-block;
+    @include font-face($font-nunito, $text-md, 700);
+    color: $color-secondary-blue-75;
+    text-transform: capitalize;
+
+    &::after {
+      content: "/";
+      display: inline-block;
+      margin: 0 .5rem;
+      color: $color-primary-black;
+    }
+    &:last-child {
+      color: $color-secondary-black-25;
+      &::after {
+        content: "";
+        display: inline-block;
+      }
+    }
+  }
+}

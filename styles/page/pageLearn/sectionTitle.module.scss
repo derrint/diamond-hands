@@ -1,0 +1,33 @@
+@import '../../theme',
+        '../../helper';
+
+.section__title {
+  h1 {
+    @include font-face($font-G8, $text-5xl, 700);
+    color:  $color-primary-white;
+  }
+}
+
+@include mq($breakpoint-tablet) {
+  .section__title {
+    margin-bottom: 3rem;
+
+    h1 {
+      font-size: $text-3xl;
+    }
+  }
+}
+
+@include mq($breakpoint-mobile) {
+  .section__title {
+    margin-bottom: 2rem;
+
+    h1 {
+      font-size: $text-2xl;
+    }
+
+    h3 {
+      font-size: $text-md;
+    }
+  }
+}

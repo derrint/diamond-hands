@@ -1,0 +1,4 @@
+# Player Login
+GET https://diamondhandsapi.candlestick.com/api/PlayerLogin
+    ?email=yoganugraha89@gmail.com
+    &password=pass12345678

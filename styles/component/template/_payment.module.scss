@@ -1,0 +1,879 @@
+.outside-wrapper {
+  &::before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #1FA3DC;
+    opacity: 0.4;
+    filter: blur(150px);
+    border-radius: 50%;
+  }
+}
+
+.stepper {
+  margin: 4rem 0;
+
+  hr {
+    width: 40px;
+    border-color: rgba(12, 53, 59, 0.4);
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .number {
+    background-color: white;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    @include font-face($font-nunito, $text-md, 700);
+    color: $color-subsidiary-blue-25;
+  }
+
+  .label {
+    @include font-face($font-nunito, $text-md, 400);
+    color: $color-secondary-blue-75;
+  }
+
+  .active {
+    .number {
+      background-color: $color-subsidiary-blue-25;
+      color: white;
+    }
+
+    .label {
+      font-weight: 700;
+    }
+  }
+
+  .previous {
+    .number {
+      background-color: $color-primary-green;
+      color: white;
+    }
+  }
+}
+
+.loading-wrapper {
+  .title {
+    @include font-face($font-nunito, $text-xl, 700);
+    color: $color-secondary-blue-75;
+    margin-bottom: 0.8rem;
+    margin-top: 4.0rem;
+  }
+  .subtitle {
+    @include font-face($font-nunito, $text-md, 400);
+    color: $color-secondary-blue-75;
+    text-align: center;
+  }
+  .loading{
+    margin: 2rem;
+  }
+}
+.is-full {
+  height: calc(100vh - 4rem);
+}
+
+.payment-wrapper {
+  padding: 2.4rem;
+  width: 100%;
+  max-width: 580px;
+  background: #F0FAF4;
+  border-radius: 10px;
+
+  .title {
+    @include font-face($font-nunito, $text-xl, 700);
+    color: $color-secondary-blue-75;
+    margin: 30px 0 5px 0;
+  }
+  .wallet-title {
+    @include font-face($font-nunito, $text-5xl, 800);
+    color: $color-secondary-blue-75;
+    margin-left: 30px;
+  }
+  .label-section {
+    @include font-face($font-nunito, $text-md, 700);
+    color: $color-secondary-blue-75;
+    margin: 20px 0 5px 0;
+  }
+
+  .price {
+    &_usd {
+      @include font-face($font-nunito, $text-5xl, 800);
+      color: $color-secondary-blue-75;
+      // border-bottom: 1px solid rgba(12, 53, 59, 0.2);
+      // margin-bottom: 1rem;
+    }
+
+    &_usdc {
+      @include font-face($font-nunito, $text-md, 800);
+      color: $color-subsidiary-blue-25;
+    }
+
+    &_crypto {
+      @include font-face($font-nunito, $text-5xl, 800);
+      color: $color-secondary-blue-75;
+      border-bottom: 1px solid;
+      border-color: rgba(12, 53, 59, 0.2);
+    }
+    &_approx {
+      @include font-face($font-nunito, $text-md, 600);
+      color: rgba(12, 53, 59, 0.6);
+    }
+  }
+
+  .lootbox-badge {
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+  }
+  .card-badge {
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+  } 
+  .lootbox-name {
+    @include font-face($font-G8, $text-sm, 700);
+    color: $color-secondary-blue-75;
+  }
+
+  .contries-dropdown {
+    .title {
+      @include font-face($font-nunito, $text-md, 700);
+      color: $color-secondary-blue-75;
+      margin: 32px 0 16px 0;
+    }
+    .country-dropdown {
+      width: 100%;
+  
+      .country-icon {
+        width: 24px;
+        margin: 8px;
+        margin-right: 0;
+      }
+  
+      .select__control {
+        background: #FFFFFF;
+        border: 1px solid rgba(28, 93, 121, 0.2);
+        box-sizing: border-box;
+        border-radius: 8px;
+        padding: 0.3rem 0.5rem;
+        @include font-face($font-nunito, $text-md, 400);
+        color: $color-secondary-blue-50;
+        text-transform: uppercase;
+
+        .select__indicator-separator {
+          display: none;
+        }
+
+        .select__indicator,
+        .select__single-value {
+          color: $color-secondary-blue-50;
+        }
+      }
+    }
+    .remember-me {
+      @include font-face($font-nunito, $text-sm, 600);
+      color: $color-secondary-blue-75;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+  
+      .label {
+        padding-left: 1.5rem;
+        a {
+          @include font-face($font-nunito, $text-sm, 600);
+          color: $color-subsidiary-blue-25;
+        }
+      }
+    }
+  }
+  .currency-dropdown {
+    display: flex;
+    justify-content: center;
+    margin-top: 3.2rem;
+    margin-bottom: 3.2rem;
+
+    .currency-icon {
+      width: 24px;
+      margin: 8px;
+      margin-right: 0;
+    }
+
+    &-from,
+    &-to {
+      width: 165px;
+
+      .select__control {
+        background: rgba(28, 93, 121, 0.05);
+        border: 1px solid rgba(28, 93, 121, 0.2);
+        box-sizing: border-box;
+        border-radius: 8px;
+        padding: 0.3rem 0.5rem;
+        @include font-face($font-nunito, $text-md, 700);
+        color: $color-secondary-blue-50;
+        text-transform: uppercase;
+
+        .select__indicator-separator {
+          display: none;
+        }
+
+        .select__indicator,
+        .select__single-value {
+          color: $color-secondary-blue-50;
+        }
+      }
+    }
+
+    .chevron-right {
+      width: 24px;
+      margin: 8px;
+      object-fit: contain;
+    }
+  }
+
+  .dh-wallet-info {
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+
+    &--label {
+      @include font-face($font-nunito, $text-sm, 400);
+      color: #1C5D79CC;
+      overflow-wrap: break-word;
+    }
+    &--icon {
+      position: relative;
+      justify-content: right;
+    }
+
+    &--value {
+      @include font-face($font-nunito, $text-md, 600);
+      color: $color-secondary-blue-50;
+      overflow-wrap: break-word;
+    }
+  }
+
+  .payment-methods {
+    .title {
+      @include font-face($font-nunito, $text-md, 700);
+      color: $color-secondary-blue-75;
+      margin: 32px 0 16px 0;
+    }
+    .title_payment {
+      @include font-face($font-nunito, $text-md, 700);
+      color: $color-secondary-blue-75;
+      margin-top: 20px;
+      margin-bottom: 5px;
+    }
+    .subtitle_payment {
+      @include font-face($font-nunito, $text-sm, 400);
+      color: rgba(12, 53, 59, 0.6);
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    .wrapper_single_card {
+      display: grid;
+      margin-top: 10px;
+      .item_single {
+        background: #FFFFFF;
+        box-shadow: inset 0px -4px 0px rgba(28, 93, 121, 0.2);
+        border-radius: 16px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 24px;
+        @include font-face($font-nunito, $text-md, 600);
+        color: $color-secondary-blue-50;
+        gap: 5px;
+
+        &.active {
+          border: 3px solid $color-subsidiary-blue-25;
+        }
+
+        .icon-cc {
+          width: 40px;
+        }
+
+        .chevron-right {
+          width: 24px;
+        }
+      }
+    }
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      .item {
+        background: #FFFFFF;
+        box-shadow: inset 0px -4px 0px rgba(28, 93, 121, 0.2);
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 16px;
+        @include font-face($font-nunito, $text-md, 600);
+        color: $color-secondary-blue-50;
+        gap: 5px;
+
+        &.active {
+          border: 3px solid $color-subsidiary-blue-25;
+        }
+
+        img {
+          width: 40px;
+        }
+      }
+    }
+  }
+
+  .summary {
+    margin-top: 32px;
+    padding: 16px;
+    @include font-face($font-nunito, $text-md, 600);
+    color: $color-secondary-blue-75;
+    background: rgba(12, 53, 59, 0.05);
+    border-radius: 8px;  
+    .item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+
+      &:first-of-type {
+        padding-top: 0;
+        padding-bottom: 16px;
+        margin-bottom: 8px;
+        border-bottom: 1px solid rgba(12, 53, 59, 0.1);
+      }
+
+      &:last-of-type {
+        padding-top: 16px;
+        padding-bottom: 0;
+        margin-top: 8px;
+        border-top: 1px solid rgba(12, 53, 59, 0.1);
+      }
+    }
+  }
+  .summary_wallet {
+    margin-top: 10px;
+    padding: 16px;
+    @include font-face($font-nunito, $text-md, 600);
+    color: $color-secondary-blue-75;
+    background: rgba(12, 53, 59, 0.05);
+    border-radius: 8px;  
+    .item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+
+      &:first-of-type {
+        padding-top: 0;
+        padding-bottom: 16px;
+        margin-bottom: 8px;
+        border-bottom: 1px solid rgba(12, 53, 59, 0.1);
+      }
+
+      &:last-of-type {
+        padding-top: 16px;
+        padding-bottom: 0;
+        margin-top: 8px;
+        border-top: 1px solid rgba(12, 53, 59, 0.1);
+      }
+    }
+  }
+  .payment-wallet-info {
+    margin: 20px 0 10px 0;
+    .icon {
+      width: 25px;
+      height: 25px;
+      margin-right: 5px;
+    }
+    .title {
+      @include font-face($font-nunito, $text-md, 700);
+      color: $color-secondary-blue-75;
+      margin: 0px;
+    }
+    .payment-wallet-info-wrapper {
+      margin-top: 10px;
+      padding: 16px;
+      @include font-face($font-nunito, $text-md, 600);
+      color: $color-secondary-blue-75;
+      background: #FFFFFF;
+      border-radius: 8px; 
+      .label {
+        margin-right: 10px;
+      }
+      .insufficient-balance {
+        @include font-face($font-nunito, $text-sm, 400);
+        color: #CE5347;
+      }
+      .topup-description {
+        @include font-face($font-nunito, $text-sm, 400);
+        color: rgba(12, 53, 59, 0.6);
+        margin-top: 10px;
+        padding: 10px;
+        background-color: rgba(12, 53, 59, 0.05);
+        border-radius: 8px;
+        .link_learn {
+          @include font-face($font-nunito, $text-sm, 600);
+          color: $color-subsidiary-blue-25;
+        }
+      }
+      .icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+      }
+      .c-dark-blue {
+        color: $color-secondary-blue-50;
+      }
+    }
+  }
+  .agreement {
+    margin-top: 32px;
+    @include font-face($font-nunito, $text-sm, 600);
+    color: $color-secondary-blue-75;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    .label {
+      padding-left: 1.5rem;
+      a {
+        @include font-face($font-nunito, $text-sm, 600);
+        color: $color-subsidiary-blue-25;
+      }
+    }
+  }
+
+  .next-button {
+    min-width: 200px;
+  }
+
+  .payment-form {
+    .title {
+      @include font-face($font-nunito, $text-xl, 700);
+      color: $color-secondary-blue-75;
+      margin-bottom: 0.8rem;
+    }
+    .title-section {
+      @include font-face($font-nunito, $text-md, 700);
+      color: $color-secondary-blue-75;
+    }
+    .subtitle {
+      @include font-face($font-nunito, $text-md, 400);
+      color: $color-secondary-blue-75;
+      text-align: center;
+    }
+    .form__payment {
+      .form-control {
+        a {
+          display: block;
+          text-align: center;
+        }
+        input, a {
+          width: 100%;
+          border: 1px solid #1C5D7933;
+          padding: 1.0rem 2.0rem;
+          border-radius: 8px;
+          
+          &.error {
+            border-color: $color-primary-red;
+          }
+        }
+        input, input::-webkit-input-placeholder {
+          @include font-face($font-nunito, $text-md, 400);
+          color: $color-secondary-blue-50;
+        }
+        
+        .label {
+          @include font-face($font-nunito, $text-sm, 600);
+          color: $color-secondary-blue-50;
+          padding-bottom: 5px;
+        }
+
+        .input-box {
+          display: flex;
+          align-items: center;
+          background: #fff;
+          border: 1px solid #1C5D7933;
+          border-radius: 8px;
+          padding: 0.0rem 2.0rem;
+          overflow: hidden;
+        }
+        .input-box .img-prefix {
+          width: 24px;
+          height: 24px;
+          margin-right: 5px;
+          border-radius: 50%;
+        }
+        .input-box .prefix {
+          @include font-face($font-nunito, $text-md, 400);
+          color: $color-secondary-blue-50;
+        }
+        
+        .input-box input {
+          flex-grow: 1;
+          @include font-face($font-nunito, $text-md, 400);
+          color: $color-secondary-blue-50;
+          border: none;
+          outline: none;
+          // padding: 1.0rem 2.0rem;
+        }
+        
+        .input-box:focus-within {
+          border-color: #777;
+        }
+      }
+      .country-dropdown {
+        width: 100%;
+    
+        .country-icon {
+          width: 24px;
+          margin: 8px;
+          margin-right: 0;
+        }
+    
+        .select__control {
+          background: #FFFFFF;
+          border: 1px solid rgba(28, 93, 121, 0.2);
+          box-sizing: border-box;
+          border-radius: 8px;
+          padding: 0.3rem 0.5rem;
+          @include font-face($font-nunito, $text-md, 400);
+          color: $color-secondary-blue-50;
+          // text-transform: uppercase;
+  
+          .select__indicator-separator {
+            display: none;
+          }
+  
+          .select__indicator,
+          .select__single-value {
+            color: $color-secondary-blue-50;
+          }
+        }
+    
+        .chevron-right {
+          width: 24px;
+          margin: 8px;
+          object-fit: contain;
+        }
+      }
+      .info {
+        @include font-face($font-nunito, $text-lg, 400);
+        font-size: $text-md;
+        color: $color-secondary-blue-50;
+        a {
+          color: $color-subsidiary-blue-25;
+        }
+        &__description {
+          @include font-face($font-nunito, $text-sm, 400);
+          color: $color-secondary-blue-75;
+          a {
+            color: $color-subsidiary-blue-25;
+          }
+        }
+    
+        &__error {
+          @include font-face($font-nunito, $text-xs, 400);
+          color: $color-primary-red;
+        }
+      }
+    }
+  }
+  .payment-authorize {
+    .title {
+      @include font-face($font-nunito, $text-xl, 700);
+      color: $color-secondary-blue-75;
+      margin-bottom: 0.8rem;
+    }
+    .title-section {
+      @include font-face($font-nunito, $text-md, 700);
+      color: $color-secondary-blue-75;
+      margin: 32px 0 10px 0;
+    }
+    .subtitle {
+      @include font-face($font-nunito, $text-md, 400);
+      color: $color-secondary-blue-75;
+      text-align: center;
+    }
+    .note {
+      @include font-face($font-nunito, $text-md, 400);
+      color: $color-secondary-blue-75;
+      text-align: center;
+      padding: 5px;
+      background-color: #F8E9C8;
+      border-radius: 0px 0px 8px 8px;
+      margin-top: -40px;
+      .title {
+        @include font-face($font-nunito, $text-md, 700);
+        color: $color-secondary-blue-75;
+        margin-bottom: 0.8rem;
+      }
+      .subtitle {
+        @include font-face($font-nunito, $text-sm, 400);
+        color: $color-secondary-blue-75;
+        text-align: center;
+      }
+    }
+    .loading-wrapper {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
+    .form__payment {
+      margin-top: 2rem;
+      margin-left: 2rem;
+      margin-right: 2rem;
+      .form-control {
+        a {
+          display: block;
+          text-align: center;
+        }
+        input, a {
+          width: 100%;
+          border: 1px solid #1C5D7933;
+          padding: 1.0rem 2.0rem;
+          border-radius: 8px;
+          
+          &.error {
+            border-color: $color-primary-red;
+          }
+        }
+        input, input::-webkit-input-placeholder {
+          @include font-face($font-nunito, $text-md, 400);
+          color: $color-secondary-blue-50;
+        }
+      }
+      .info {
+        @include font-face($font-nunito, $text-lg, 400);
+        font-size: $text-md;
+        color: $color-secondary-blue-50;
+        a {
+          color: $color-subsidiary-blue-25;
+        }
+        &__description {
+          @include font-face($font-nunito, $text-sm, 400);
+          color: $color-secondary-blue-75;
+          a {
+            color: $color-subsidiary-blue-25;
+          }
+        }
+    
+        &__error {
+          @include font-face($font-nunito, $text-xs, 400);
+          color: $color-primary-red;
+        }
+      }
+    }
+  }
+
+  .payment-processing {
+    // padding: 20px 0;
+
+    .note {
+      @include font-face($font-nunito, $text-md, 400);
+      color: $color-secondary-blue-75;
+      text-align: center;
+      padding: 5px;
+      background-color: #F8E9C8;
+      border-radius: 8px;
+      // margin-top: -40px;
+      .title {
+        @include font-face($font-nunito, $text-md, 700);
+        color: $color-secondary-blue-75;
+        margin-bottom: 0.8rem;
+        margin-top: 0.8rem;
+      }
+      .subtitle {
+        @include font-face($font-nunito, $text-sm, 400);
+        color: $color-secondary-blue-75;
+        text-align: center;
+      }
+    }
+
+    .title {
+      margin: 0;
+      text-align: center;
+    }
+    
+    .subtitle {
+      @include font-face($font-nunito, $text-md, 400);
+      color: $color-secondary-blue-75;
+      text-align: center;
+    }
+  }
+
+  .payment-status {
+    .icon {
+      width: 80px;
+    }
+    
+    .title {
+      @include font-face($font-nunito, $text-xl, 700);
+      color: $color-secondary-blue-75;
+      margin-top: 1rem;
+      margin-bottom: 4rem;
+    }
+    .title-md {
+      @include font-face($font-nunito, $text-md, 700);
+      color: $color-secondary-blue-75;
+      margin: 2.0rem;
+    }
+    .subtitle {
+      @include font-face($font-nunito, $text-md, 400);
+      color: $color-secondary-blue-75;
+      text-align: center;
+    }
+    .payment-result {
+      margin-top: 2rem;
+      margin-left: 2rem;
+      margin-right: 2rem;
+      .title-section {
+        @include font-face($font-nunito, $text-md, 700);
+        color: $color-secondary-blue-75;
+      }
+      .payment-detail {
+        padding: 2rem;
+        background-color:rgba(12, 53, 59, 0.05);
+        border-radius: 8px;
+        .payment-grid {
+          position: relative;
+          display: grid;
+          grid-template-columns: auto auto;
+          padding-bottom: 1rem;
+          span {
+            @include font-face($font-nunito, $text-md, 600);
+            color: $color-secondary-blue-75;
+          }
+        }
+        .line-border-bottom {
+          border-bottom: 1px solid;
+          border-color: rgba(12, 53, 59, 0.1);
+        }
+      }
+    }
+  }
+  
+  .payment-detail-transaction {
+    .title {
+      @include font-face($font-nunito, $text-xl, 700);
+      color: $color-secondary-blue-75;
+      margin-bottom: 1.8rem;
+    }
+    ._header {
+      background-color: rgba(12, 53, 59, 0.05);
+      margin: 2rem 0rem;
+      padding: 2rem;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      .title {
+        padding: 0px 10px;
+        @include font-face($font-nunito, $text-3xl, 700);
+      }
+      .text-blue {
+        color: #1FA3DC
+      }
+      .text-bluegrey {
+        color: #1C5D79
+      }
+      .icon-wrapper {
+        width: '100%';
+        padding: 10px;
+      }
+      .sub-title {
+        @include font-face($font-nunito, $text-md, 700);
+        color: #0C353B
+      }
+    }
+    ._body {
+      .steps-progress {
+        width: 100%;
+        padding: 0rem 1rem;
+      }
+      .list-progress{
+        width: 100%;
+        padding: 0rem 3rem;
+        .each-progress {
+          margin: 10px;
+          display: grid;
+          grid-template-columns: 10% 45% 45%;
+          width: 100%;
+          // ._icon {
+          //   min-width: 50px,
+          // }
+          // ._desc {
+          //   min-width: 200px,
+          // }
+          // ._datetime {
+          //   min-width: 200px,
+          // }
+          span {
+            @include font-face($font-nunito, $text-md, 600);
+            color: rgba(12, 53, 59, 0.4);
+            &.active {
+              font-weight: 700;
+              color: #0C353B;
+            }
+          }
+        }
+      }
+    }
+    ._footer {
+      background-color:#0C353B;
+      width: 100%;
+      margin: 2rem 0rem;
+      padding: 3rem;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      ._content {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        width: 100%;
+      }
+      span {
+        @include font-face($font-nunito, $text-md, 600);
+        color: #FFFFFF;
+        &.label {
+          color: rgba(255, 255, 255, 0.6);
+        }
+      }
+    }
+    .text-close {
+      color: #1C5D79;
+      font-weight: bold;
+    }
+    .text-note {
+      @include font-face($font-nunito, $text-md, 400);
+      color:rgba(12, 53, 59, 0.6);
+      margin-bottom: 1.8rem;
+    }
+  }
+}
+
+.bottom-action {
+  width: 100%;
+  position: absolute;
+  bottom: 3rem;
+  left: 0;
+
+  .label {
+    color: #0C353B99;
+    margin-bottom: 8px;
+  }
+}

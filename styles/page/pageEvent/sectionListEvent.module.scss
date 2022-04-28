@@ -1,0 +1,269 @@
+@import '../../theme',
+        '../../helper';
+
+.section__listEvent {
+  .banner__wrapper {
+    width: 80%;
+  }
+
+  .banner {
+    aspect-ratio: 18 / 9;
+    overflow: hidden;
+    border-radius: 16px;
+
+    .image {
+      width: 100%;
+    }
+
+    .caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 5rem 10rem;
+      background: linear-gradient(180deg, rgba(12, 53, 59, 0) 0%, #000000 100%);
+
+      h5 {
+        @include font-face($font-G8, $text-sm, 700);
+        color: $color-subsidiary-blue-25;
+        margin-bottom: 1rem;
+      }
+
+      h1 {
+        @include font-face($font-G8, $text-3xl, 700);
+        color: $color-primary-white;
+        margin-bottom: 15px;
+      }
+
+      h4 {
+        @include font-face($font-G8, $text-xs, 600);
+        color: $color-primary-white;
+        margin-bottom: 20px;
+        background-color: $color-secondary-blue-50;
+        padding: 8px 15px;
+        border-radius: 20px;
+        display: inline-block;
+      }
+
+      p {
+        @include font-face($font-nunito, $text-lg, 400);
+        color: $color-primary-white;
+        margin-bottom: 20px;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* number of lines to show */
+                line-clamp: 2; 
+        -webkit-box-orient: vertical;
+      }
+    }
+  }
+
+  .nextPrevWrapper {
+    justify-content: center;
+    text-align: center;
+    display: none;
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  .container {
+    .list__title {
+      width: 80%;
+      margin: 0 auto;
+
+      @include font-face($font-G8, $text-2xl, 700);
+      color: $color-secondary-blue-75;
+      margin-bottom: 25px;
+    }
+
+    .list__wrapper {
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      gap: 4rem;
+
+      .item {
+        // display: grid;
+        // grid-template-columns: 210px auto;
+        margin-bottom: 3rem;
+        background-color: $color-secondary-blue-50;
+        border-radius: 15px;
+
+        .block__image {
+          cursor: pointer;
+          .imageCover {
+            position: relative;
+            
+            img {
+              width: 100%;
+              height: 200px;
+              object-fit: cover;
+              border-radius: 15px;
+              border-bottom-left-radius: 0;
+              border-bottom-right-radius: 0;
+            }
+          }
+        }
+        .block__decription {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 2rem;
+          .date {
+            margin-bottom: 1rem;
+            @include font-face($font-G8, $text-xs, 600);
+            color: $color-primary-white;
+            background: rgba(255, 255, 255, 0.2);
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 16px;
+          }
+          .title {
+            margin-bottom: 15px;
+            @include font-face($font-G8, $text-xl, 600);
+            color: $color-primary-white;
+            cursor: pointer;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* number of lines to show */
+                    line-clamp: 2; 
+            -webkit-box-orient: vertical;
+          }
+          .description {
+            margin: 10px 0; 
+            @include font-face($font-nunito, $text-md, 300);
+            color: $color-primary-white;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; /* number of lines to show */
+                    line-clamp: 3; 
+            -webkit-box-orient: vertical;
+          }
+        }
+      }
+    }
+
+    .emptyState {
+      margin: 0 auto;
+      padding: 4rem 13rem;
+      width: fit-content;
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(8px);
+      border-radius: 20px;
+      text-align: center;
+
+      &__text1 {
+        @include font-face($font-nunito, $text-lg, 400);
+        margin-bottom: 8rem;
+      }
+
+      &__text2 {
+        @include font-face($font-G8, $text-sm, 600);
+        padding: 16px 80px;
+        background: #1C5D79;
+        border-radius: 16px;
+        color: $color-primary-white;
+      }
+    }
+  }
+}
+
+.detail {
+  text-align: center;
+  img {
+    margin: 0 auto;
+    width: 60%;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+  }
+  .date {
+    margin-bottom: 1rem;
+    @include font-face($font-G8, $text-xs, 700);
+    color: $color-primary-white;
+  }
+  .title {
+    margin-bottom: 1rem;
+    @include font-face($font-G8, $text-2xl, 700);
+    color: $color-primary-white;
+    margin-bottom: 2rem;
+  }
+  .description {
+    @include font-face($font-nunito, $text-md, 400);
+    color: $color-primary-white;
+    margin-bottom: 2rem;
+  }
+  a {
+    display: inline-block;
+    margin-top: 2rem;
+  }
+}
+
+@include mq($breakpoint-tablet) {
+  .section__listEvent {
+    .container {
+      .list__wrapper {
+        width: 100%;
+        
+        .item {
+          grid-template-columns: 1fr;
+          padding-bottom: 3rem;
+          
+          .block__decription {
+            padding: 0;
+            text-align: center;
+            gap: 6rem;
+
+            .date {
+              text-align: center;
+            }
+
+            .description {
+              a {
+                display: inline-block;
+              }
+            }
+          }
+        }
+      }
+
+      .emptyState {
+        margin: 0 auto;
+        padding: 3rem;
+
+        &__text1 {
+          margin-bottom: 3rem;
+        }
+      }
+    }
+
+    .nextPrevWrapper {
+      display: flex;
+    }
+  } 
+}
+
+@include mq($breakpoint-mobile) {
+  .section__listEvent {
+    .container {
+      .emptyState {
+        margin: 0 auto;
+        padding: 2rem;
+
+        &__text1 {
+          margin-bottom: 2rem;
+        }
+
+        &__text2 {
+          padding: 2rem;
+        }
+      }
+    }
+  }
+  
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "label": "Marketplace",
+    "href": "/marketplace",
+    "icon": "IconMarketPlace"
+  },
+  {
+    "id": 2,
+    "label": "Leaderboard",
+    "href": "/rank",
+    "icon": "IconLeaderBoard"
+  },
+  {
+    "id": 3,
+    "label": "Event",
+    "href": "/event",
+    "icon": "IconEvent"
+  },
+  {
+    "id": 4,
+    "label": "How To Play",
+    "href": "/learn",
+    "icon": "IconLearn"
+  }
+]

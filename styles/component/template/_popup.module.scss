@@ -1,0 +1,183 @@
+.onboarding{
+  width: 750px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  &_title {
+    @include font-face($font-nunito, $text-xl, 600);
+    margin-bottom: 3.2rem;
+
+    &_bold {
+      @include font-face($font-nunito, $text-xl, 800);
+      &_blue {
+        @include font-face($font-nunito, $text-xl, 800);
+        color: $color-subsidiary-blue-25;
+      }
+    }
+  }
+
+  &_desciption {
+
+    h1 {
+      @include font-face($font-nunito, $text-2xl, 800);
+      margin-bottom: 1.6rem;
+      
+      span {
+        color: #1271F1;
+      }
+    }
+    p {
+      @include font-face($font-nunito, $text-md, 400);
+    }
+  }
+
+  &_cardWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    position: relative;
+
+    .label {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 5px 15px;
+      font-size: $text-xs;
+
+      position: absolute;
+      top: -15px;
+      z-index: 10;
+      background: #3CC051;
+      color: #FFFFFF;
+      border-radius: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: max-content;
+      
+    }
+  }
+  
+  &_link {
+    @include font-face($font-nunito, $text-md, 600);
+    color: $color-subsidiary-blue-25;
+  }
+  // &_button {
+  //   // padding: 1.4rem 2.4rem !important;
+  // }
+  &_button_text {
+    @include font-face($font-G8, $text-md, 600);
+    color: #FFFFFF
+  }
+  &_badge {
+    position: absolute;
+    margin-left: -20px;
+    margin-top: 10px;
+  } 
+  &_image {
+    position: absolute;
+    bottom: 0px;
+    // margin-top: -93px;
+  } 
+}
+
+.alertlootbox{
+  max-width: 750px;
+  span {
+    @include font-face($font-nunito, $text-md, 600);
+  }
+  .openlootbox-text-button {
+    @include font-face($font-G8, $text-md, 600);
+  }
+  .dismiss-text-button {
+    @include font-face($font-G8, $text-md, 600);
+    color: $color-secondary-blue-50;
+  }
+  &_button {
+    padding: 0.25rem 2rem !important;
+  }
+}
+
+.cookies {
+  max-width: 750px;
+  color: #fff;
+  .container {
+    display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: auto auto auto;
+    gap: 2rem;
+    img {
+      opacity: 0.6;
+    }
+    h1 {
+      @include font-face($font-nunito, $text-sm, 600);
+      opacity: 0.6;
+    }
+    span {
+      @include font-face($font-nunito, $text-sm, 400);
+      opacity: 0.6;
+    }
+    .txt-btn {
+      @include font-face($font-nunito, $text-sm, 600);
+      opacity: 1 !important;
+      margin: 0rem 2rem;
+    }
+  }
+}
+
+@include mq($breakpoint-tablet) {
+  .onboarding{
+    width: 100%;
+
+    &_title {
+      font-size: $text-lg;
+  
+      &_bold {
+        font-size: $text-lg;
+        &_blue {
+          font-size: $text-lg;
+        }
+      }
+    }
+
+    &_desciption {
+      h1 {
+        font-size: $text-xl;
+      }
+      p {
+        font-size: $text-sm;
+      }
+    }
+
+    &_cardWrapper {
+      gap: 2rem;
+    }
+
+    &_button {
+      padding: 1rem 2rem !important;
+    }
+    &_button_text {
+      font-size: $text-xs;
+    }
+  }
+}
+
+@include mq($breakpoint-mobile) {
+  .onboarding{
+    &_cardWrapper {
+      gap: 1rem;
+    }
+  }
+
+  .cookies {
+    width: 100%;
+    
+    .container {
+      grid-template-columns: auto;
+    
+      span {
+        text-align: center;
+      }
+    }
+  }
+}

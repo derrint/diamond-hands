@@ -1,0 +1,88 @@
+@import '../../theme',
+        '../../helper';
+
+.sellWrapper {
+  padding: 1rem 2rem;
+  width: 100%;
+  min-width: 600px;
+  color: #ffffff;
+  .title {
+    @include font-face($font-G8, $text-2xl, 600);
+    padding: 0.5rem;
+  }
+  .subtitle {
+    @include font-face($font-nunito, $text-md, 600);
+    opacity: 0.6;
+  }
+  .subtitle2 {
+    @include font-face($font-nunito, $text-md, 800);
+    opacity: 0.6;
+  }
+  .subtitle3 {
+    @include font-face($font-nunito, $text-md, 800);
+    opacity: 0.6;
+    color: #1FA3DC;
+  }
+  .subtitle4 {
+    @include font-face($font-nunito, $text-md, 800);
+  }
+  .label {
+    @include font-face($font-nunito, $text-sm, 600);
+    opacity: 0.6;
+  }
+  .methodButton {
+    background: #1C5D79;
+    border: 1px solid #1FA3DC;
+    box-sizing: border-box;
+    border-radius: 25px;
+    padding: 1rem 2rem;
+    .label {
+      @include font-face($font-G8, $text-lg, 600);
+      margin-right: 1rem;
+    }
+  }
+  .form {
+    .label {
+      @include font-face($font-nunito, $text-md, 600);
+    }
+    .labelPoss{
+      margin-top: 1.5rem;
+    }
+    input {
+      @include font-face($font-nunito, $text-sm, 600);
+      width: 100%;
+      padding: 1.5rem 1.5rem;
+      border-radius: 40px;
+      color : $color-primary-black;
+    }
+  }
+  .noteWrapper {
+    align-items: flex-end;
+  }
+  .agreement {
+    margin-top: 32px;
+    margin-bottom: 10px;
+    @include font-face($font-nunito, $text-sm, 600);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .label {
+      padding-left: 1.5rem;
+      @include font-face($font-nunito, $text-sm, 600);
+      opacity: 0.6;
+    }
+  }
+  .buttonConfirm {
+    padding-top: 2rem;
+    .title {
+      @include font-face($font-G8, $text-md, 600);
+      padding: 0.5rem;
+    }
+  }
+}
+
+@include mq($breakpoint-tablet-landscape) {
+  .sellWrapper {
+    min-width: unset;
+  }
+}

@@ -1,0 +1,223 @@
+[
+   {
+      "id": 1,
+      "name":"SSR Limited Time Offer",
+      "description":"Get a 30% chance to collect SSR Card at this lootbox. If you buy 5 pack, We will 100% guarantee get SSR pack.",
+      "content":{
+         "cards":{
+            "c":4,
+            "r":3,
+            "sr":2,
+            "ssr":0,
+            "bonuses":{
+               "c":{
+                  "qty":0,
+                  "chance":0
+               },
+               "r":{
+                  "qty":2,
+                  "chance":1
+               },
+               "sr":{
+                  "qty":1,
+                  "chance":0.5
+               },
+               "ssr":{
+                  "qty":1,
+                  "chance":0.05
+               }
+            }
+         },
+         "dd":3000
+      },
+      "price":"30000",
+      "expiredAt":1635638399,
+      "assets":{
+         "image":"https://derrint.sirv.com/Images/diamond-hands/lootbox/ssr-lto-lootbox.png",
+         "badge":"https://derrint.sirv.com/Images/diamond-hands/lootbox/ssr-lto-badge.png"
+      }
+   },
+   {
+      "id": 2,
+      "name":"SSR Character Unlock",
+      "description":"You  can get a specific promoted card if you open at least 10 pack (of any Loot-box type of package)",
+      "content":{
+         "cards":{
+            "c":3,
+            "r":2,
+            "sr":1,
+            "ssr":0,
+            "bonuses":{
+               "c":{
+                  "qty":1,
+                  "chance":1
+               },
+               "r":{
+                  "qty":1,
+                  "chance":0.5
+               },
+               "sr":{
+                  "qty":1,
+                  "chance":0.2
+               },
+               "ssr":{
+                  "qty":0,
+                  "chance":0
+               }
+            }
+         },
+         "dd":2000
+      },
+      "price":"",
+      "expiredAt":1635163199,
+      "assets":{
+         "image":"https://derrint.sirv.com/Images/diamond-hands/lootbox/ssr-character-lootbox.png",
+         "badge":"https://derrint.sirv.com/Images/diamond-hands/lootbox/ssr-character-badge.png"
+      }
+   },
+   {
+      "id": 3,
+      "name":"Special Pack Offer",
+      "description":"Get a 30% chance to collect SSR Card at this lootbox. If you buy 5 pack, We will 100% guarantee get SSR pack.",
+      "content":{
+         "cards":{
+            "c":2,
+            "r":1,
+            "sr":0,
+            "ssr":0,
+            "bonuses":{
+               "c":{
+                  "qty":2,
+                  "chance":1
+               },
+               "r":{
+                  "qty":1,
+                  "chance":0.5
+               },
+               "sr":{
+                  "qty":0,
+                  "chance":0
+               },
+               "ssr":{
+                  "qty":0,
+                  "chance":0
+               }
+            }
+         },
+         "dd":1000
+      },
+      "price":"10000",
+      "expiredAt":1634310000,
+      "assets":{
+         "image":"https://derrint.sirv.com/Images/diamond-hands/lootbox/special-pack-lootbox.png",
+         "badge":"https://derrint.sirv.com/Images/diamond-hands/lootbox/special-pack-badge.png"
+      }
+   },
+
+   {
+      "id": 4,
+      "name":"Starter Pack",
+      "description":"Every box opened you will get",
+      "content":{
+         "cards":{
+            "c":1,
+            "r":0,
+            "sr":0,
+            "ssr":0,
+            "bonuses":{}
+         },
+         "dd":55
+      },
+      "price":"1000",
+      "expiredAt":null,
+      "assets":{
+         "image":"https://derrint.sirv.com/Images/diamond-hands/lootbox/starter-lootbox.png",
+         "badge":"https://derrint.sirv.com/Images/diamond-hands/lootbox/starter-badge.png"
+      }
+   },
+   {
+      "id": 5,
+      "name":"Beta Pack",
+      "description":"Every box opened you will get",
+      "content":{
+         "cards":{
+            "c":2,
+            "r":0,
+            "sr":0,
+            "ssr":0,
+            "bonuses":{}
+         },
+         "dd":70
+      },
+      "price":"2000",
+      "expiredAt":null,
+      "assets":{
+         "image":"https://derrint.sirv.com/Images/diamond-hands/lootbox/beta-lootbox.png",
+         "badge":"https://derrint.sirv.com/Images/diamond-hands/lootbox/beta-badge.png"
+      }
+   },
+   {
+      "id": 6,
+      "name":"Omega Pack",
+      "description":"Every box opened you will get",
+      "content":{
+         "cards":{
+            "c":1,
+            "r":1,
+            "sr":0,
+            "ssr":0,
+            "bonuses":{}
+         },
+         "dd":85
+      },
+      "price":"3000",
+      "expiredAt":null,
+      "assets":{
+         "image":"https://derrint.sirv.com/Images/diamond-hands/lootbox/omega-lootbox.png",
+         "badge":"https://derrint.sirv.com/Images/diamond-hands/lootbox/omega-badge.png"
+      }
+   },
+   {
+      "id": 7,
+      "name":"Alpha Pack",
+      "description":"Every box opened you will get",
+      "content":{
+         "cards":{
+            "c":2,
+            "r":1,
+            "sr":0,
+            "ssr":0,
+            "bonuses":{}
+         },
+         "dd":100
+      },
+      "price":"4000",
+      "expiredAt":null,
+      "assets":{
+         "image":"https://derrint.sirv.com/Images/diamond-hands/lootbox/alpha-lootbox.png",
+         "badge":"https://derrint.sirv.com/Images/diamond-hands/lootbox/alpha-badge.png"
+      }
+   },
+   {
+      "id": 8,
+      "name":"Diamond Pack",
+      "description":"Every box opened you will get",
+      "content":{
+         "cards":{
+            "c":2,
+            "r":2,
+            "sr":0,
+            "ssr":0,
+            "bonuses":{}
+         },
+         "dd":115
+      },
+      "price":"5000",
+      "expiredAt":null,
+      "assets":{
+         "image":"https://derrint.sirv.com/Images/diamond-hands/lootbox/diamond-lootbox.png",
+         "badge":"https://derrint.sirv.com/Images/diamond-hands/lootbox/diamond-badge.png"
+      }
+   }
+   
+]

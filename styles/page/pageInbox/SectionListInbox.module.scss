@@ -1,0 +1,658 @@
+@import '../../theme',
+        '../../helper';
+
+.section__listInbox {
+  .container {
+    .tab {
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+
+      &_item {
+        background: #FFFFFF;
+        border-radius: 10px 10px 0px 0px;
+        display: block;
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+        padding: 13px 20px;
+        transition: all .5s;
+        height: 100%;
+
+        &.active {
+          background: #1FA3DC;
+        }
+        .title {
+          @include font-face($font-G8, $text-md, 700);
+          color: #1C5D79;
+          &.active {
+            color: #FFFFFF;
+          }
+        }
+        .badge {
+          // position:relative;
+          position: absolute;
+          @include font-face($font-G8, $text-3xs, 700);
+          top: -5px;
+          right: -5px;
+          padding: 2px 6px;
+          border-radius: 50%;
+          background: #ed4c5c;
+          color: #FFFFFF;
+        }
+      }
+    }
+    // .wrapper {
+    //   display: flex;
+    //   justify-content: center;
+    //   .wrapperScrollable {
+    //     overflow-y: scroll; 
+    //     overflow-x: hidden; 
+    //     height: 600px;
+    //     width: 900px;
+    //     .content {
+    //       width: 100%;
+    //       height: 600px;
+    //       // overflow: visible;
+    //       background: #FFFFFF;
+    //       border-radius: 20px;
+    //       transition: all .5s;
+    //       position: relative;
+    //       box-shadow: 0px 0px 48px 0px #0000000D;
+
+    //       .messageWrapper {
+    //         background-color: $color-primary-white;
+    //         border-radius: 20px;
+    //         &_item {
+    //           position: relative;
+    //           padding: 10px;
+    //           border-bottom: 1px solid $color-primary-grey;
+    //           display: block;
+    //           grid-template-columns: 4rem auto auto;
+    //           &.unread {
+    //             background-color:rgba(28, 93, 121, 0.1);
+    //           }
+    //           &.borderRadiusFirstRow {
+    //             border-top-left-radius: 20px;
+    //             border-top-right-radius: 20px;
+    //           }
+    //           &_indicator {
+    //             margin-bottom: 5px;
+    //             &_circle {
+    //               width: 10px;
+    //               height: 10px;
+    //               -webkit-border-radius: 25px;
+    //               -moz-border-radius: 25px;
+    //               border-radius: 25px;
+    //               background: #ed4c5c;
+    //             }
+    //           }
+    //           &_message {
+    //             margin: 0px 25px;
+    //             span {
+    //               position: relative;
+    //               @include font-face($font-G8, $text-sm, 700);
+    //               color: $color-secondary-blue-75;
+    //               &:last-child {
+    //                 text-align: right;
+    //                 font-weight: 600;
+    //               }
+    //             } 
+    //             &_desc {
+    //               margin-top: 5px;
+    //               width: 820px; /* the element needs a fixed width (in px, em, %, etc) */
+    //               // overflow: hidden; /* make sure it hides the content that overflows */
+    //               // white-space: nowrap; /* don't break the line */
+    //               // text-overflow: ellipsis; /* give the beautiful '...' effect */
+    //               display: -webkit-box;
+    //               -webkit-line-clamp: 2;
+    //               -webkit-box-orient: vertical;
+    //               overflow: hidden;
+    //               text-overflow: ellipsis;
+    //               span {
+    //                 position: relative;
+    //                 @include font-face($font-nunito, $text-sm, 700);
+    //                 color: $color-secondary-blue-75;
+    //               } 
+    //             }
+    //           }
+  
+    //           &:last-child {
+    //             border-bottom: none;
+    //           }
+    //         }
+    //       }
+    //       .messageEmpty {
+    //         position: absolute;
+    //         top: 0;
+    //         bottom: 0;
+    //         left: 0;
+    //         right: 0;
+    //         .title {
+    //           @include font-face($font-nunito, $text-xl, 700);
+    //           color: #0C353B;
+    //         }
+    //         .subtitle {
+    //           @include font-face($font-nunito, $text-md, 400);
+    //           color: #0C353B;
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
+    .wrapper {
+      display: flex;
+      justify-content: center;
+      
+      .content {
+        background: #FFFFFF;
+        border-radius: 20px;
+        position: relative;
+        min-width: 760px;
+        overflow-y: auto;
+        transition: all .5s;
+        height: 600px;
+        box-shadow: 0px 0px 48px 0px #0000000D;
+        
+        .messageWrapper {
+          background-color: $color-primary-white;
+          border-radius: 20px;
+          &_item {
+            position: relative;
+            padding: 10px;
+            border-bottom: 1px solid $color-primary-grey;
+            display: block;
+            grid-template-columns: 4rem auto auto;
+            &.unread {
+              background-color: rgba(28, 93, 121, 0.1);
+            }
+            &.borderRadiusFirstRow {
+              border-top-left-radius: 20px;
+              border-top-right-radius: 20px;
+            }
+            &_indicator {
+              margin-bottom: 5px;
+              align-self: flex-start;
+              &_circle {
+                width: 10px;
+                height: 10px;
+                -webkit-border-radius: 25px;
+                -moz-border-radius: 25px;
+                border-radius: 25px;
+                background: #ed4c5c;
+              }
+            }
+            &_message {
+              margin: 0px 10px;
+              span {
+                position: relative;
+                @include font-face($font-G8, $text-sm, 700);
+                color: $color-secondary-blue-75;
+                &:last-child {
+                  text-align: right;
+                  font-weight: 600;
+                }
+              } 
+              &_desc {
+                margin-top: 5px;
+                width: 600px; /* the element needs a fixed width (in px, em, %, etc) */
+                // overflow: hidden; /* make sure it hides the content that overflows */
+                // white-space: nowrap; /* don't break the line */
+                // text-overflow: ellipsis; /* give the beautiful '...' effect */
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                span {
+                  position: relative;
+                  @include font-face($font-nunito, $text-sm, 700);
+                  color: $color-secondary-blue-75;
+                } 
+              }
+              
+              &_date {
+                span {
+                  @include font-face($font-nunito, $text-sm, 700);
+                  color: #1C5D79;
+                }   
+              }
+            }
+            &_icon {
+              margin : 0px 20px;
+            }
+            &:last-child {
+              border-bottom: none;
+            }
+          }
+        }
+        .messageEmpty {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          .title {
+            @include font-face($font-nunito, $text-xl, 700);
+            color: #0C353B;
+          }
+          .subtitle {
+            @include font-face($font-nunito, $text-md, 400);
+            color: #0C353B;
+          }
+        }
+      }
+      .content::-webkit-scrollbar {
+        width: 10px;
+      }
+      
+      /* Track */
+      .content::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey; 
+        border-radius: 5px;
+      }
+       
+      /* Handle */
+      .content::-webkit-scrollbar-thumb {
+        background: #0c353b; 
+        border-radius: 5px;
+      }
+      
+      /* Handle on hover */
+      .content::-webkit-scrollbar-thumb:hover {
+        background: #b30000; 
+      }
+    }
+    .button-play-now {
+      padding: 1.25rem 2rem !important;
+    }
+  }
+}
+
+@include mq($breakpoint-tablet) {
+  .section__listInbox {
+    .container {
+      .tab {
+        gap: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+  
+        &_item {
+          padding: 10px;
+          .title {
+            @include font-face($font-G8, $text-sm, 700);
+            color: #1C5D79;
+            &.active {
+              color: #FFFFFF;
+            }
+          }
+          span {
+            text-align: center;
+          }
+        }
+      }
+
+      .wrapper {
+        width: 100%;
+        display: flex;
+        gap: 0;
+
+        .leaderboard {
+          padding: 2rem;
+          min-width: unset;
+        }
+        .content {
+          background: #FFFFFF;
+          border-radius: 20px;
+          position: relative;
+          min-width: 500px;
+          overflow-y: auto;
+          transition: all .5s;
+          height: 600px;
+          box-shadow: 0px 0px 48px 0px #0000000D;
+          
+          .messageWrapper {
+            background-color: $color-primary-white;
+            border-radius: 20px;
+            &_item {
+              position: relative;
+              padding: 10px;
+              border-bottom: 1px solid $color-primary-grey;
+              display: block;
+              grid-template-columns: 4rem auto auto;
+              &.unread {
+                background-color: rgba(28, 93, 121, 0.1);
+              }
+              &.borderRadiusFirstRow {
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+              }
+              &_indicator {
+                margin-bottom: 5px;
+                align-self: flex-start;
+                &_circle {
+                  width: 10px;
+                  height: 10px;
+                  -webkit-border-radius: 25px;
+                  -moz-border-radius: 25px;
+                  border-radius: 25px;
+                  background: #ed4c5c;
+                }
+              }
+              &_message {
+                margin: 0px 10px;
+                span {
+                  position: relative;
+                  @include font-face($font-G8, $text-sm, 700);
+                  color: $color-secondary-blue-75;
+                  &:last-child {
+                    text-align: right;
+                    font-weight: 600;
+                  }
+                } 
+                &_desc {
+                  margin-top: 5px;
+                  width: 400px; /* the element needs a fixed width (in px, em, %, etc) */
+                  // overflow: hidden; /* make sure it hides the content that overflows */
+                  // white-space: nowrap; /* don't break the line */
+                  // text-overflow: ellipsis; /* give the beautiful '...' effect */
+                  display: -webkit-box;
+                  -webkit-line-clamp: 2;
+                  -webkit-box-orient: vertical;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  span {
+                    position: relative;
+                    @include font-face($font-nunito, $text-sm, 700);
+                    color: $color-secondary-blue-75;
+                  } 
+                }
+              }
+              &_icon {
+                margin : 0px 20px;
+              }
+              &:last-child {
+                border-bottom: none;
+              }
+            }
+          }
+          .messageEmpty {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            .title {
+              @include font-face($font-nunito, $text-xl, 700);
+              color: #0C353B;
+            }
+            .subtitle {
+              @include font-face($font-nunito, $text-md, 400);
+              color: #0C353B;
+            }
+          }
+        }
+        .content::-webkit-scrollbar {
+          width: 10px;
+        }
+        
+        /* Track */
+        .content::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 5px grey; 
+          border-radius: 5px;
+        }
+         
+        /* Handle */
+        .content::-webkit-scrollbar-thumb {
+          background: #0c353b; 
+          border-radius: 5px;
+        }
+        
+        /* Handle on hover */
+        .content::-webkit-scrollbar-thumb:hover {
+          background: #b30000; 
+        }
+      }
+    }
+  }
+}
+@include mq($breakpoint-mobile) {
+  .section__listInbox {
+    .container {
+      .tab {
+        gap: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+  
+        &_item {
+          padding: 10px;
+          .title {
+            @include font-face($font-G8, $text-sm, 700);
+            color: #1C5D79;
+            &.active {
+              color: #FFFFFF;
+            }
+          }
+          span {
+            text-align: center;
+          }
+        }
+      }
+
+      .wrapper {
+        width: 100%;
+        display: flex;
+        gap: 0;
+
+        .leaderboard {
+          padding: 2rem;
+          min-width: unset;
+        }
+        .content {
+          background: #FFFFFF;
+          border-radius: 20px;
+          position: relative;
+          min-width: 400px;
+          overflow-y: auto;
+          transition: all .5s;
+          height: 600px;
+          box-shadow: 0px 0px 48px 0px #0000000D;
+          
+          .messageWrapper {
+            background-color: $color-primary-white;
+            border-radius: 20px;
+            &_item {
+              position: relative;
+              padding: 10px;
+              border-bottom: 1px solid $color-primary-grey;
+              display: block;
+              grid-template-columns: 4rem auto auto;
+              &.unread {
+                background-color: rgba(28, 93, 121, 0.1);
+              }
+              &.borderRadiusFirstRow {
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+              }
+              &_indicator {
+                margin-bottom: 5px;
+                align-self: flex-start;
+                &_circle {
+                  width: 10px;
+                  height: 10px;
+                  -webkit-border-radius: 25px;
+                  -moz-border-radius: 25px;
+                  border-radius: 25px;
+                  background: #ed4c5c;
+                }
+              }
+              &_message {
+                margin: 0px 10px;
+                span {
+                  position: relative;
+                  @include font-face($font-G8, $text-sm, 700);
+                  color: $color-secondary-blue-75;
+                  &:last-child {
+                    text-align: right;
+                    font-weight: 600;
+                  }
+                } 
+                &_desc {
+                  margin-top: 5px;
+                  width: 300px; /* the element needs a fixed width (in px, em, %, etc) */
+                  // overflow: hidden; /* make sure it hides the content that overflows */
+                  // white-space: nowrap; /* don't break the line */
+                  // text-overflow: ellipsis; /* give the beautiful '...' effect */
+                  display: -webkit-box;
+                  -webkit-line-clamp: 2;
+                  -webkit-box-orient: vertical;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  span {
+                    position: relative;
+                    @include font-face($font-nunito, $text-sm, 700);
+                    color: $color-secondary-blue-75;
+                  } 
+                }
+              }
+              &_icon {
+                margin : 0px 20px;
+              }
+              &:last-child {
+                border-bottom: none;
+              }
+            }
+          }
+          .messageEmpty {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            .title {
+              @include font-face($font-nunito, $text-xl, 700);
+              color: #0C353B;
+            }
+            .subtitle {
+              @include font-face($font-nunito, $text-md, 400);
+              color: #0C353B;
+            }
+          }
+        }
+        .content::-webkit-scrollbar {
+          width: 10px;
+        }
+        
+        /* Track */
+        .content::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 5px grey; 
+          border-radius: 5px;
+        }
+         
+        /* Handle */
+        .content::-webkit-scrollbar-thumb {
+          background: #0c353b; 
+          border-radius: 5px;
+        }
+        
+        /* Handle on hover */
+        .content::-webkit-scrollbar-thumb:hover {
+          background: #b30000; 
+        }
+        // display: grid;
+        // grid-template-columns: 1fr;
+        // gap: 8rem;
+        // .item {
+        //   background: linear-gradient(180deg, #1C5D79 0%, rgba(28, 93, 121, 0) 100%);
+        //   border-radius: 20px;
+        //   padding-top: 5rem;
+        //   position: relative;
+        //   .title {
+        //     position: absolute;
+        //     top: -20px;
+        //     left: 50%;
+        //     transform: translateX(-50%);
+        //     width: 80%;
+        //     span {
+        //       background-color: $color-secondary-yellow-25;
+        //       padding: .5rem 2rem;
+        //       display: block;
+        //       text-align: center;
+        //       border-top-left-radius: 7px;
+        //       border-top-right-radius: 20px;
+        //       border-bottom-left-radius: 7px;
+        //       border-bottom-right-radius: 7px;
+        //       @include font-face($font-G8, $text-2xl, 700);
+        //       color: $color-secondary-blue-75;
+        //       position: relative;
+        //       &::after{
+        //         content: "";
+        //         position: absolute;
+        //         top: 0;
+        //         right: -.15rem;
+        //         width: 0;
+        //         height: 0;
+        //         border-left: .65rem solid $color-secondary-yellow-75 ;;
+        //         border-bottom: .65rem solid $color-secondary-yellow-75 ;;
+        //         border-top: .65rem solid transparent;
+        //         border-right: .65rem solid transparent;
+        //       }
+        //     }
+        //   }
+        //   .information {
+        //     display: flex;
+        //     justify-content: space-between;
+        //     padding: 0 3rem;
+        //     margin-bottom: 3rem;
+        //     .information__title {
+        //       @include font-face($font-nunito, $text-md, 700);
+        //       color: $color-primary-white;
+        //       margin-bottom: 1rem;
+        //     }
+        //     .information__description {
+        //       @include font-face($font-G8, $text-xl, 800);
+        //       color: $color-primary-yellow;
+        //       -webkit-text-stroke: 1px $color-primary-black;
+        //       display: flex;
+        //       align-items: center;
+        //       img {
+        //         margin-right: .5rem;
+        //       }
+        //     }
+        //   }
+        //   .player {
+        //     background-color: $color-primary-white;
+        //     margin: 0 1rem;
+        //     border-radius: 20px;
+        //     .item__player {
+        //       position: relative;
+        //       padding: 2rem 1rem;
+        //       border-bottom: 1px solid $color-secondary-grey-50;
+        //       display: grid;
+        //       grid-template-columns: 3rem auto auto;
+        //       &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+        //         span {
+        //           &:nth-child(1) {
+        //             color: $color-primary-green
+        //           }
+        //         }
+        //       }
+        //       span {
+        //         @include font-face($font-G8, $text-sm, 700);
+        //         color: $color-secondary-blue-75;
+        //         &:last-child {
+        //           text-align: right;
+        //           font-weight: 600;
+        //         }
+        //       }
+        //       &:last-child {
+        //         border-bottom: none;
+        //       }
+        //     }
+        //   }
+  
+        // }
+      }
+    }
+  }
+}

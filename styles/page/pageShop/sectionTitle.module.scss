@@ -1,0 +1,40 @@
+@import '../../theme',
+        '../../helper';
+
+.section__title {
+  margin: 3rem;
+
+  h1 {
+  @include font-face($font-G8, $text-4xl, 700);
+    color:  $color-secondary-blue-75;
+  }
+
+  h3 {
+    @include font-face($font-nunito, $text-lg, 400);
+    color:  $color-secondary-blue-75;
+  }
+}
+
+@include mq($breakpoint-tablet) {
+  .section__title {
+    margin-bottom: 3rem;
+
+    h1 {
+      font-size: $text-3xl;
+    }
+  }
+}
+
+@include mq($breakpoint-mobile) {
+  .section__title {
+    margin-bottom: 2rem;
+
+    h1 {
+      font-size: $text-2xl;
+    }
+
+    h3 {
+      font-size: $text-md;
+    }
+  }
+}

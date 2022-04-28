@@ -1,0 +1,931 @@
+@import '../../theme',
+        '../../helper';
+
+$header-navbar-height: 86px;
+
+.fullpage-container {
+  padding-top: $header-navbar-height;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section_2_lootbox_info {
+  @extend .fullpage-container;
+
+  background-image: url('https://derrint.sirv.com/Images/diamond-hands/home/section-2/bg.png');
+
+  h2 {
+    @include font-face($font-G8, $text-3xl, 700);
+    color: $color-primary-white;
+  }
+  p {
+    @include font-face($font-nunito, $text-lg, 400);
+    color: $color-primary-white;
+  }
+
+  .lootbox {
+    margin-top: 20%;
+    width: 100%;
+  }
+  
+  .shine {
+    position: absolute;
+    width: 50%;
+    bottom: 27%;
+    right: 33%;
+  }
+
+  .card {
+    &_top {
+      position: absolute;
+      width: 14%;
+      top: 13%;
+      left: 38%;
+    }
+
+    &_left {
+      width: 12%;
+      position: absolute;
+      top: 37%;
+      left: 25%;
+
+      .floating {
+        animation-delay: 2400ms;
+      }
+    }
+
+    &_right {
+      width: 15%;
+      position: absolute;
+      top: 33%;
+      right: 35%;
+
+      .floating {
+        animation-delay: 2800ms;
+      }
+    }
+
+    &_bottom {
+      width: 15%;
+      position: absolute;
+      top: 50%;
+      right: 50%;
+
+      .floating {
+        animation-delay: 2000ms;
+      }
+    }
+  }
+  
+  .floating {
+    position: absolute;
+    animation-name: floating;
+    animation-delay: 1600ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-duration: 4s;
+
+    transform: translate3d(0,-50%,0);
+    transition: transform 1000ms cubic-bezier(.52,.01,.16,1) 1000ms;
+  }
+
+  @keyframes floating {
+    0%,to { transform:translate(0%,-50%); }
+    25% { transform:translate(5px,calc(-50% + 15px)); }
+    50% { transform:translate(10px,calc(-50% + 5px)); }
+    75% {transform:translate(0%,calc(-50% + 15px)); }
+  }
+}
+
+.section_3_game_trailer {
+  @extend .fullpage-container;
+
+  background-image: url('https://derrint.sirv.com/Images/diamond-hands/home/section-3/bg.png');
+  
+  h4 {
+    @include font-face($font-G8, $text-2xl, 700);
+    color: $color-primary-white;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    span {
+      img {
+        width: 56px;
+      }
+      
+      &:nth-of-type(3) {
+        transform: scaleX(-1);
+      }
+    }
+  }
+
+  h1 {
+    @include font-face($font-G8, $text-3xl, 700);
+    color: $color-primary-white;
+    text-align: center;
+    margin-bottom: 2rem;
+
+    span {
+      color: #1271F1;
+
+      padding: 0 50px;
+      margin: 0 -50px;
+
+      background: linear-gradient(to right, #1271F1 0, white 10%, #1271F1 20%);
+      background-position: 0;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 4s infinite linear;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes shine {
+      0% {background-position: -50px;}
+      60% {background-position: 520px;}
+      100% {background-position: 520px;}
+    }
+  }
+
+  .trailerVideo {
+    width: 70%;
+    aspect-ratio: 21 / 9;
+    background-image: url("https://derrint.sirv.com/Images/diamond-hands/home/feature-battle.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+  }
+}
+
+.section_4_game_rule {
+  @extend .fullpage-container;
+
+  background-image: url('https://derrint.sirv.com/Images/diamond-hands/home/section-4/bg.png');
+
+  .imageWrapper {
+    transform: rotate(-4deg);
+    width: 90%;
+  }
+
+  .image {
+    border: 4px solid #CFF2FF;
+  }
+
+  h2 {
+    @include font-face($font-G8, $text-2xl, 700);
+    color: $color-subsidiary-blue-25;
+  }
+  p {
+    @include font-face($font-nunito, $text-lg, 400);
+    color: $color-secondary-blue-75;
+  }
+}
+
+.section_5_daily_quest {
+  @extend .fullpage-container;
+  background-color: #04364B;
+  background-position: bottom;
+  background-size: contain;
+  background-image: url('https://derrint.sirv.com/Images/diamond-hands/home/section-5/bottom-illustration.png');
+
+  p {
+    @include font-face($font-nunito, $text-md, 400);
+    color: $color-primary-white;
+  }
+}
+
+.section_6_nft_cards {
+  @extend .fullpage-container;
+  // background-color: #04364B;
+  // background-position: bottom;
+  // background-size: contain;
+  // background-image: url('https://derrint.sirv.com/Images/diamond-hands/home/section-5/bottom-illustration.png');
+  background: linear-gradient(178.47deg, #4D9FC1 -4.17%, #D5F4FF 94.14%);
+
+  .cloud {
+    &_wrapper {
+      position: absolute;
+      display: flex;
+      width: 100%;
+      height: 100%;
+    }
+
+    &_top {
+      &_left {
+        top: 10vh;
+        left: 10vw;
+        position: absolute;
+        width: 30vw;
+      }
+      &_right {
+        top: 20vh;
+        right: 15vh;
+        position: absolute;
+        width: 30vw;
+      }
+    }
+
+    &_bottom {
+      &_left {
+        bottom: 5vh;
+        left: 0;
+        position: absolute;
+        width: 50vw;
+      }
+      &_right {
+        bottom: 5vh;
+        right: 0;
+        position: absolute;
+        width: 30vw;
+      }
+      &_center {
+        bottom: 20vh;
+        left: -30vw;
+        position: absolute;
+        width: 30vw;
+        animation:translateinfinite 15s linear infinite;
+      }
+
+      @keyframes translateinfinite {
+        0% { transform:translateX(0);  }
+        100% { transform:translateX(130vw);  }
+      }
+    }
+  }
+
+  .card {
+    width: 35%;
+
+    &_top {
+      &_left {
+        top: 20%;
+        left: 8%;
+        position: absolute;
+        width: 16%;
+      }
+      &_right {
+        top: 21%;
+        right: 13%;
+        position: absolute;
+        width: 17%;
+
+        .floating {
+          animation-delay: 2400ms;
+        }
+      }
+    }
+
+    &_bottom {
+      &_left {
+        bottom: 30%;
+        left: 2%;
+        position: absolute;
+        width: 21%;
+
+        .floating {
+          animation-delay: 2000ms;
+        }
+      }
+      &_right {
+        bottom: 30%;
+        right: 5%;
+        position: absolute;
+        width: fit-content;
+
+        .info {
+          display: flex;
+          flex-direction: row;
+          background-color: $color-secondary-blue-75;
+          padding: 2rem 3rem;
+          border-radius: 16px;
+          gap: 1.5rem;
+
+          .label {
+            @include font-face($font-G8, $text-sm, 700);
+            color: #FFFFFF88;
+            white-space: nowrap;
+          }
+
+          .value {
+            @include font-face($font-G8, $text-xl, 700);
+            color: #FFFFFF;
+            transition: all .5s;
+          }
+        }
+      }
+    }
+  }
+
+  h2 {
+    @include font-face($font-G8, $text-2xl, 700);
+    color: $color-subsidiary-blue-25;
+  }
+  p {
+    @include font-face($font-nunito, $text-lg, 400);
+    color: $color-secondary-blue-75;
+  }
+
+  .floating {
+    position: absolute;
+    animation-name: floating;
+    animation-delay: 1600ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-duration: 4s;
+
+    transform: translate3d(0,-50%,0);
+    transition: transform 1000ms cubic-bezier(.52,.01,.16,1) 1000ms;
+  }
+
+  @keyframes floating {
+    0%,to { transform:translate(0%,-50%); }
+    25% { transform:translate(5px,calc(-50% + 15px)); }
+    50% { transform:translate(10px,calc(-50% + 5px)); }
+    75% {transform:translate(0%,calc(-50% + 15px)); }
+  }
+}
+
+.section_7_events {
+  @extend .fullpage-container;
+  background-image: url('https://derrint.sirv.com/Images/diamond-hands/home/section-7/bg.png');
+
+  .lamp {
+    &_left {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 50%;
+    }
+
+    &_right {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 50%;
+    }
+  }
+
+  .podium {
+    width: 70%;
+  }
+
+  .shine {
+    position: absolute;
+    width: 42%;
+    bottom: 29.7%;
+    z-index: 10;
+  }
+
+  .coin {
+    position: absolute;
+    width: 15%;
+    top: -5%;
+    z-index: 8;
+  }
+
+  .card {
+    &_first {
+      position: absolute;
+      width: 20%;
+      top: 35%;
+      left: 40%;
+      z-index: 9;
+    }
+
+    &_second {
+      position: absolute;
+      width: 15%;
+      top: 54%;
+      left: 18%;
+
+      .floating {
+        animation-delay: 3200ms;
+      }
+    }
+
+    &_third {
+      position: absolute;
+      width: 14%;
+      top: 56%;
+      left: 68%;
+
+      .floating {
+        animation-delay: 2400ms;
+      }
+    }
+  }
+  
+  .floating {
+    position: absolute;
+    animation-name: floating;
+    animation-delay: 1600ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-duration: 6s;
+
+    transform: translate3d(0,-50%,0);
+    transition: transform 1000ms cubic-bezier(.52,.01,.16,1) 1000ms;
+  }
+
+  @keyframes floating {
+    0%,to { transform:translate(0%,-50%); }
+    25% { transform:translate(5px,calc(-50% + 15px)); }
+    50% { transform:translate(10px,calc(-50% + 5px)); }
+    75% {transform:translate(0%,calc(-50% + 15px)); }
+  }
+
+  h2 {
+    @include font-face($font-G8, $text-2xl, 700);
+    color: $color-subsidiary-blue-25;
+  }
+  p {
+    @include font-face($font-nunito, $text-lg, 400);
+    color: $color-secondary-blue-75;
+  }
+}
+
+.section_8_stages {
+  @extend .fullpage-container;
+  background-image: url('https://derrint.sirv.com/Images/diamond-hands/home/section-3/bg.png');
+
+  .stage {
+    &_text {
+      @include font-face($font-nunito, $text-xs, 700);
+      text-align: center;
+    }
+  }
+
+  h2 {
+    @include font-face($font-G8, $text-2xl, 700);
+    color: $color-subsidiary-blue-25;
+  }
+  p {
+    @include font-face($font-nunito, $text-lg, 400);
+    color: $color-secondary-blue-75;
+  }
+}
+
+.section_9_lootbox_list {
+  @extend .fullpage-container;
+  height: 100%;
+  background-image: url('https://derrint.sirv.com/Images/diamond-hands/home/section-9/bg.png');
+  
+  h1 {
+    @include font-face($font-G8, $text-4xl, 700);
+    color: $color-primary-white;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .cardWrapper {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    z-index: 2;
+    width: 80%;
+  }
+
+  .buttonWrapper {
+    a {
+      z-index: 2;
+    }
+  }
+}
+
+.section_10_roadmap {
+  @extend .fullpage-container;
+  background: linear-gradient(180deg, #EBF8E5 65.55%, #F8E9C8 100%);
+
+  h1 {
+    @include font-face($font-G8, $text-4xl, 700);
+    color: $color-secondary-blue-75;
+  }
+
+  .item {
+    // min-width: 320px;
+    min-height: 280px;
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+
+    // &:first-of-type {
+    //   margin-left: 2rem;
+    // }
+
+    // &:last-of-type {
+    //   margin-right: 2rem;
+    // }
+
+    h2 {
+      @include font-face($font-G8, $text-2xl, 700);
+      color: $color-secondary-blue-75;
+      margin-bottom: 8px;
+    }
+    h3 {
+      @include font-face($font-nunito, $text-2xl, 700);
+      color: $color-secondary-blue-75;
+      margin-bottom: 8px;
+    }
+    h4 {
+      @include font-face($font-nunito, $text-sm, 500);
+      color: #666666;
+      margin-bottom: 24px;
+    }
+    p {
+      @include font-face($font-nunito, $text-md, 400);
+      color: $color-secondary-blue-75;
+    }
+
+  }
+
+  .nextPrevWrapper {
+    justify-content: center;
+    text-align: center;
+    display: none;
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  .buttonDiscord {
+    background: linear-gradient(91.23deg, #3CC051 0%, #1271F1 100%);
+    border-radius: 56px;
+    padding: 20px 50px;
+    @include font-face($font-G8, $text-lg, 600);
+    color: white;
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+.section_11_join {
+  @extend .fullpage-container;
+  background: #1C5D79;
+
+  h2 {
+    @include font-face($font-G8, $text-4xl, 700);
+    color: $color-primary-white;
+  }
+
+  .more {
+    @include font-face($font-G8, $text-md, 600);
+    color: $color-subsidiary-blue-25;
+  }
+  .image__card {
+    position: absolute;
+    bottom: -2.2rem;
+    left: -3.6rem;
+    width: 300px;
+  }
+
+  .illustration {
+    position: absolute;
+    bottom: 0;
+
+    &:nth-of-type(12) {
+      left: 0;
+      height: 13vw;
+      z-index: 1;
+
+      &:hover {
+        height: 15vw;
+      }
+    }
+
+    &:nth-of-type(11) {
+      padding-bottom: 5vw;
+      left: 8%;
+      height: 32vw;
+      z-index: 2;
+
+      &:hover {
+        height: 35vw;
+      }
+    }
+
+    &:nth-of-type(10) {
+      left: 7%;
+      height: 18vw;
+      z-index: 3;
+
+      &:hover {
+        height: 20vw;
+      }
+    }
+
+    &:nth-of-type(9) {
+      padding-bottom: 6vw;
+      left: 32%;
+      height: 31vw;
+      z-index: 4;
+
+      &:hover {
+        height: 33vw;
+      }
+    }
+
+    &:nth-of-type(8) {
+      padding-bottom: 8vw;
+      right: 15%;
+      height: 27vw;
+      z-index: 5;
+
+      &:hover {
+        height: 29vw;
+      }
+    }
+
+    &:nth-of-type(7) {
+      left: 18%;
+      height: 19vw;
+      z-index: 6;
+
+      &:hover {
+        height: 21vw;
+      }
+    }
+
+    &:nth-of-type(6) {
+      right: 7%;
+      height: 15vw;
+      z-index: 7;
+
+      &:hover {
+        height: 17vw;
+      }
+    }
+
+    &:nth-of-type(5) {
+      padding-bottom: 10vw;
+      right: 27%;
+      height: 30vw;
+      z-index: 8;
+
+      &:hover {
+        height: 32vw;
+      }
+    }
+
+    &:nth-of-type(4) {
+      left: 30%;
+      height: 18vw;
+      z-index: 9;
+
+      &:hover {
+        height: 20vw;
+      }
+    }
+
+    &:nth-of-type(3) {
+      right: 16%;
+      height: 15vw;
+      z-index: 10;
+
+      &:hover {
+        height: 17vw;
+      }
+    }
+
+    &:nth-of-type(2) {
+      right: 27%;
+      height: 20vw;
+      z-index: 11;
+
+      &:hover {
+        height: 22vw;
+      }
+    }
+
+    &:nth-of-type(1) {
+      left: 40%;
+      height: 25vw;
+      z-index: 12;
+
+      &:hover {
+        height: 27vw;
+      }
+    }
+  }
+}
+
+/*
+* RESPONSIVE
+*/
+
+@include mq($breakpoint-tablet-landscape) {
+  .section_3_game_trailer {
+    h4 {
+      font-size: $text-xl;
+    }
+
+    h1 {
+      font-size: $text-2xl;
+    }
+
+    .trailerVideo {
+      width: 100%;
+    }
+
+    .buttonPlayTrailer {
+      font-size: $text-sm;
+    }
+  }
+
+  .section_4_game_rule,
+  .section_6_nft_cards,
+  .section_7_events,
+  .section_8_stages {
+    h2 {
+      font-size: $text-xl;
+    }
+    p {
+      font-size: $text-md;
+    }
+  }
+
+  .section_6_nft_cards {
+    .card {
+      &_bottom {
+        &_right {  
+          .info {
+            padding: 1rem 2rem;
+  
+            .label {
+              font-size: $text-xs;
+            }
+  
+            .value {
+              font-size: $text-md;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .section_9_lootbox_list {
+    h1 {
+      font-size: $text-3xl;
+    }
+
+    .cardWrapper {
+      width: 90%;
+      gap: 2rem;
+    }
+  }
+
+  .section_10_roadmap {
+    h1 {
+      font-size: $text-3xl;
+    }
+
+    .item {
+      min-width: unset;
+      min-height: 320px;
+    }
+
+    .nextPrevWrapper {
+      display: flex;
+    }
+
+    h2 {
+      font-size: $text-3xl;
+    }
+
+    .image__card {
+      width: 25vw;
+    }
+  }
+
+  .section_11_join {
+    h2 {
+      font-size: $text-3xl;
+    }
+  }
+}
+
+@include mq($breakpoint-tablet) {
+  .section_3_game_trailer {
+    h4 {
+      font-size: $text-lg;
+    }
+
+    h1 {
+      font-size: $text-xl;
+    }
+
+    .buttonPlayTrailer {
+      font-size: $text-xs;
+      padding: 1rem 1.2rem;
+    }
+  }
+
+  .section_4_game_rule,
+  .section_6_nft_cards,
+  .section_7_events,
+  .section_8_stages {
+    h2 {
+      font-size: $text-lg;
+    }
+  }
+
+  .section_6_nft_cards {
+    .card {
+      &_bottom {
+        &_right {  
+          right: 0;
+          bottom: 15%;
+
+          .info {
+            padding: .75rem 1.5rem;
+            gap: 1rem;
+  
+            .label {
+              font-size: $text-2xs;
+            }
+  
+            .value {
+              font-size: $text-xs;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .section_9_lootbox_list {
+    h1 {
+      font-size: $text-2xl;
+    }
+    
+    .cardWrapper {
+      width: 100%;
+    }
+  }
+
+  .section_10_roadmap {
+    .item {
+      min-height: 400px;
+    }
+
+    h2 {
+      font-size: $text-2xl;
+    }
+
+    .image__card {
+      width: 25vw;
+    }
+
+    .buttonDiscord {
+      padding: 15px 40px;
+    }
+  }
+
+  .section_11_join {
+    h2 {
+      font-size: $text-2xl;
+    }
+  }
+}
+
+
+@include mq($breakpoint-mobile) {
+  .section_9_lootbox_list {
+    h1 {
+      font-size: $text-2xl;
+    }
+    
+    .cardWrapper {
+      gap: 3rem;
+      flex-direction: column;
+    }
+  }
+
+  .section_10_roadmap {
+    h1 {
+      font-size: $text-2xl;
+    }
+
+    h2 {
+      font-size: $text-2xl;
+      // padding: 0 2rem;
+    }
+
+    .image__card {
+      width: 200px;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -3rem;
+    }
+  }
+}

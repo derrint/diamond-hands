@@ -1,0 +1,14 @@
+# Game Build
+
+Place all the `Build` folder contents here.
+
+## Files
+
+Make sure it has the following 4 files :
+
+```javascript
+jankenpon.data  
+jankenpon.framework.js  
+jankenpon.loader.js  
+jankenpon.wasm 
+```

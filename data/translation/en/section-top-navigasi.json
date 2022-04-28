@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "order": 1,
+    "label": "Shop",
+    "href": "/shop",
+    "icon": "IconMenuShop",
+    "isVisible": true,
+    "isAuth": false
+  },
+  {
+    "id": 2,
+    "order": 2,
+    "label": "Cards",
+    "href": "/cards",
+    "icon": "IconMenuCards",
+    "isVisible": true,
+    "isAuth": false
+  },
+  {
+    "id": 3,
+    "order": 3,
+    "label": "Play",
+    "href": "/play",
+    "icon": "IconMenuPlay",
+    "isVisible": true,
+    "isAuth": false
+  },
+  {
+    "id": 4,
+    "order": 4,
+    "label": "Rank",
+    "href": "/rank",
+    "icon": "IconMenuRank",
+    "isVisible": true,
+    "isAuth": false
+  },
+  {
+    "id": 5,
+    "order": 5,
+    "label": "Event",
+    "href": "/event",
+    "icon": "IconMenuEvent",
+    "isVisible": true,
+    "isAuth": false
+  },
+  {
+    "id": 6,
+    "order": 6,
+    "label": "Learn",
+    "href": "/learn",
+    "icon": "IconMenuLearn",
+    "isVisible": true,
+    "isAuth": false
+  },
+  {
+    "id": 7,
+    "order": 3,
+    "label": "Token",
+    "href": "/token",
+    "icon": "IconToken",
+    "isVisible": false,
+    "isAuth": false
+  },
+  {
+    "id": 8,
+    "order": 4,
+    "label": "Lottery",
+    "href": "/lottery",
+    "icon": "IconLottery",
+    "isVisible": false,
+    "isAuth": false
+  },
+  {
+    "id": 9,
+    "order": 5,
+    "label": "Game",
+    "href": "/learn",
+    "icon": "IconGame",
+    "isVisible": false,
+    "isAuth": false
+  }
+]

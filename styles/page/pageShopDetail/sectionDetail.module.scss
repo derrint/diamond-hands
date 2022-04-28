@@ -1,0 +1,225 @@
+@import '../../theme',
+        '../../helper';
+
+.section__detail {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 35% auto;
+    gap: 4rem;
+
+    .block__right {
+
+      .badge {
+        height: 100px;
+        width: 100px;
+        object-fit: contain;
+      }
+
+      h1 {
+        @include font-face($font-G8, $text-3xl, 700);
+        color: $color-secondary-blue-75;
+      }
+
+      .subtitle {
+        @include font-face($font-nunito, $text-xs, 800);
+        color: $color-primary-white;
+        padding: .4rem 1.3rem;
+        margin-bottom: 2.5rem;
+        border-radius: 15px;
+        background-color: $color-secondary-red;
+        width: fit-content;
+        z-index: 1;
+        display: flex;
+
+        .icon {
+          height: 16px;
+          width: 16px;
+          object-fit: contain;
+          margin-right: 0.8rem;
+        }
+      }
+      .description {
+        &_label {
+          @include font-face($font-nunito, $text-md, 700);
+        }
+        &_value {
+          @include font-face($font-nunito, $text-md, 400);
+        }
+      }
+      .grid_detail {
+        max-width: 600px;
+        &_header {
+          @include font-face($font-nunito, $text-md, 600);
+          padding: 10px 0px;
+        }
+        &_body_start {
+          @include font-face($font-nunito, $text-md, 600);
+          background-color: #ffffff;
+          padding: 10px 30px;
+          margin: 5px 0px;
+          border-top-left-radius: 50px;
+          border-bottom-left-radius: 50px;
+        }
+        &_body {
+          @include font-face($font-nunito, $text-md, 400);
+          background-color: #ffffff;
+          padding: 10px 0px;
+          margin: 5px 0px;
+          color: #1C5D79;
+        }
+        &_body_end {
+          @include font-face($font-nunito, $text-md, 400);
+          background-color: #ffffff;
+          padding: 10px 0px;
+          margin: 5px 0px;
+          border-top-right-radius: 50px;
+          border-bottom-right-radius: 50px;
+          color: #1C5D79;
+        }
+      }
+
+      p {
+        @include font-face($font-nunito, $text-md, 400);
+        color: $color-secondary-blue-75;
+      }
+
+      .dd {
+        // border: 1px solid $color-secondary-blue-75;
+        margin: 1.5rem 0rem;
+        background-color:rgba(31, 163, 220, 0.1);
+        border-radius: 15px;
+        padding: 1.5rem;
+        display: inline-flex;
+        flex-direction: column;
+        
+        &_icon {
+          height: 32px;
+          width: 32px;
+          object-fit: contain;
+          margin-right: 1rem;
+        }
+
+        &_label {
+          @include font-face($font-G8, $text-md, 500);
+        }
+
+        &_value {
+          @include font-face($font-G8, $text-md, 700);
+        }
+      }
+      .stock {
+        margin: 1.5rem 0rem;
+        &_label {
+          @include font-face($font-nunito, $text-md, 700);
+        }
+
+        &_value {
+          @include font-face($font-G8, $text-xl, 800);
+          color: #61C454;
+        }
+        .danger {
+          color: $color-secondary-red;
+        }
+        .danger_text {
+          @include font-face($font-nunito, $text-md, 600);
+          color: $color-secondary-red;
+        }
+      }
+
+      .button {
+        min-width: 230px;
+        .text {
+          color: $color-primary-black;
+          text-shadow: none;
+        }
+        .price {
+          @include text-stroke(#D58542, 2px)
+        }
+      }
+    }
+  }
+}
+
+
+
+
+@include mq($breakpoint-tablet) {
+  .section__detail {
+    .container {
+      .wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        .block__left {
+          .wrapperImage {
+            width: 100%;
+            & > div {
+              &:first-child {
+                width: 50%;
+                margin-bottom: 6rem;
+              }
+            }
+          }
+        }
+        .block__right {
+          h1 {
+            @include font-face($font-G8, 3.6rem, 700);
+            color: $color-secondary-blue-75;
+          }
+          p {
+            @include font-face($font-nunito, $text-md, 400);
+            color: $color-secondary-blue-75;
+          }
+          .information {
+            display: flex;
+            gap: 2rem;
+            @include font-face($font-G8, $text-sm, 600);
+            color: $color-secondary-blue-75;
+            margin-bottom: 2rem;
+            .serie {
+              border: 1px solid $color-secondary-blue-75;
+              border-radius: 15px;
+              padding: 1.5rem;
+              span {
+                font-weight: 800;
+              }
+            }
+            .rarity {
+              border: 1px solid $color-secondary-blue-75;
+              border-radius: 15px;
+              padding: 1.5rem;
+              span {
+                font-weight: 800;
+              }
+            }
+          }
+          .information__price {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            .virtual__price {
+              @include font-face($font-G8, $text-2xl, 700);
+              color: $color-secondary-blue-50;
+            }
+            .price {
+              @include font-face($font-nunito, $text-lg, 700);
+              color: $color-secondary-blue-50;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include mq($breakpoint-mobile) {
+  .section__detail {
+    .wrapper {
+      .block__right {
+        h1 {
+          @include font-face($font-G8, $text-xl, 700);
+          color: $color-secondary-blue-75;
+        }
+      }
+    }
+  }
+}

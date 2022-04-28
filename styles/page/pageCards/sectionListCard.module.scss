@@ -1,0 +1,276 @@
+@import '../../theme',
+        '../../helper';
+
+.section__listCard {
+  position: relative;
+  .container {
+    position: relative;
+    overflow: hidden;
+    .bg_cloud {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    .emptyMarket {
+      margin: 30px;
+      .title {
+        @include font-face($font-G8, $text-xl, 600);
+        color: #0C353B;
+        margin-bottom: 30px;
+      }
+      .subtitle {
+        @include font-face($font-nunito, $text-md, 400);
+        color: #0C353B;
+      }
+    }
+    .emptyState {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 2rem;
+      margin-top: 10rem;
+      margin-bottom: 10rem;
+
+      h3 {
+        @include font-face($font-G8, $text-xl, 600);
+      }
+
+      span {
+        @include font-face($font-nunito, $text-md, 300);
+      }
+    }
+    .wrapperCards {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 4rem;
+  
+      .itemUnique {
+        background: radial-gradient(50% 50% at 50% 50%, #1C5D79 0%, #0C353B 100%);
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(8px);
+        border-radius: 16px;
+        padding: 1.8rem;
+        max-width: 220px;
+        width: 100%;
+        
+        .listedBadge {
+          position: absolute;
+          top: 0;
+          right: 0;
+          padding: 1rem;
+          z-index: 2;
+          border-top-right-radius: 15px;
+          border-bottom-left-radius: 15px;
+          @include font-face($font-G8, $text-2xs, 600);
+          color: $color-primary-white;
+          background-color: #CE5347;
+        }
+        .price {
+          margin-bottom: 0.8rem;
+  
+          h3 {
+            @include font-face($font-nunito, $text-sm, 700);
+            color: #F5C451;
+          }
+          span {
+            @include font-face($font-nunito, $text-sm, 500);
+            color: #F5C451;
+          }
+          .prefix {
+            @include font-face($font-nunito, $text-2xs, 500);
+            color: #F5C451;
+          }
+        }
+        
+        .status {
+          &_label {
+            @include font-face($font-G8, $text-2xs, 600);
+            color: $color-primary-white;
+            text-align: center;
+          }
+  
+          &_value {
+            @include font-face($font-G8, $text-xs, 700);
+            color: $color-primary-white;
+            text-align: center;
+          }
+        }
+  
+        .button {
+          &_text {
+            @include font-face($font-G8, $text-xs, 700);
+            padding: .25rem 1rem;
+            text-align: center;
+          }
+        }
+      }
+      .itemMycard {
+        background: radial-gradient(50% 50% at 50% 50%, #1C5D79 0%, #0C353B 100%);
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(8px);
+        border-radius: 16px;
+        padding: 1.8rem;
+        max-width: 220px;
+        width: 100%;
+        position: relative;
+        
+        .listedBadge {
+          position: absolute;
+          top: 0;
+          right: 0;
+          padding: 1rem;
+          z-index: 2;
+          border-top-right-radius: 15px;
+          border-bottom-left-radius: 15px;
+          @include font-face($font-G8, $text-2xs, 600);
+          color: $color-primary-white;
+          background-color: #CE5347;
+        }
+        
+        .status {
+          &_label {
+            @include font-face($font-G8, $text-2xs, 600);
+            color: $color-primary-white;
+            text-align: center;
+          }
+  
+          &_value {
+            @include font-face($font-G8, $text-xs, 700);
+            color: $color-primary-white;
+            text-align: center;
+          }
+        }
+  
+        .button {
+          &_text {
+            @include font-face($font-G8, $text-xs, 700);
+            padding: .25rem 1rem;
+            text-align: center;
+          }
+        }
+      }
+    }
+  
+    .pagination {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      @include font-face($font-G8, $text-md, 600);
+      color: $color-secondary-blue-75;
+  
+      .nextCenter {
+        padding: 1rem 2rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+  
+        img {
+          width: 16px;
+          height: 16px;
+          object-fit: contain;
+          margin-left: 1rem;
+        }
+      }
+      
+      .current {
+        background: #FFFFFF;
+        border: 1px solid rgba(28, 93, 121, 0.2);
+        border-radius: 23px;
+        padding: 8px 18px;
+        margin: 0 8px;
+      }
+  
+      .prev, .next {
+        border-radius: 0 16px 16px 0;
+        display: inline-flex;
+  
+        img {
+          width: 16px;
+          height: 16px;
+          object-fit: contain;
+        }
+      }
+  
+      .prev{
+        border-radius: 16px 0 0 16px;
+        margin-left: 1rem;
+      }
+    }
+  }
+  .containerMyCard {
+    background: linear-gradient(180deg, #CFF2FF 0%, rgba(240, 250, 244, 0) 100%);
+    border: 4px solid #E2EEF3;
+    padding: 4rem 4rem 4rem 4rem;
+    border-radius: 24px;
+  }
+}
+
+@include mq($breakpoint-tablet-landscape) {
+  .section__listCard {
+    .container {
+      .pagination {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        
+        .empty, .nextCenter {
+          display: none;
+        }
+      }
+    }
+    .containerMyCard {
+      padding: 1.5rem;
+
+      .wrapperCards {
+        gap: 1.5rem;
+      }
+    }
+  }
+}
+
+
+@include mq($breakpoint-tablet) {
+  .section__listCard {
+    margin-top: 0;
+    .container {
+      position: relative;
+      overflow: hidden;
+      .wrapperCards {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 2rem;
+      }
+
+      .pagination {
+        display: flex !important;
+        justify-content: center;
+        gap: 1rem;
+
+        .nextCenter {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@include mq($breakpoint-mobile) {
+  .section__listCard {
+    .container {
+      position: relative;
+      overflow: hidden;
+      .wrapperCards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2rem;
+      }
+      .pagination {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        .paginationNav {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

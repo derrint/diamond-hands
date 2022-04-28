@@ -1,0 +1,48 @@
+body {
+  .mode--dark {
+    background: linear-gradient(180deg, #1C5D79 65.55%, #F8E9C8 100%);
+    main {
+      background: linear-gradient(180deg, #1C5D79 65.55%, #F8E9C8 100%);
+    }
+    header {
+      // .menu {
+      //   a {
+      //     background-color: rgba(255, 255, 255, 0.4);
+      //     margin-right: 1rem;
+      //     padding-top: 1rem;
+      //     padding-bottom: 1rem;
+      //     border-radius: 30px;
+      //     &:last-child {
+      //       margin-right: 0;
+      //     }
+      //   }
+      // }
+      .burger-menu {
+        background-color: rgb(229 248 236);
+        padding: 10px;
+        border-radius: 20px;
+      }
+      .dh-btn {
+        &.is-blue {
+          background-color: rgba(255, 255, 255, 0.4);
+        }
+        span {
+          color: #ffffff;
+        }
+      }
+      &.on-scroll {
+        .burger-menu {
+          background-color: rgba(255, 255, 255, 0.4);
+        }
+        .dh-btn {
+          &.is-blue {
+            background-color: $color-secondary-blue-50;
+          }
+          span {
+            color: $color-secondary-blue-50;
+          }
+        }
+      }
+    }
+  }
+}

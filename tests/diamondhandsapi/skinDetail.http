@@ -1,0 +1,4 @@
+# Skin Detail
+GET https://diamondhandsapi.candlestick.com/api/SkinGet
+    ?skinId=87349275339522049
+

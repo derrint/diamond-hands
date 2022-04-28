@@ -1,0 +1,5 @@
+# Event List
+GET https://diamondhandsapi.candlestick.com/api/EventList
+    ?limit=4
+    &offset=0
+

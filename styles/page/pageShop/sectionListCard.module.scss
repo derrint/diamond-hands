@@ -1,0 +1,59 @@
+@import '../../theme',
+        '../../helper';
+
+.section__listCard {
+  position: relative;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+  }
+}
+.NoLootboxContainer {
+  padding: 2rem;
+  width: 100%;
+  min-width: 600px;
+  color: #ffffff;
+  .title {
+    @include font-face($font-G8, $text-2xl, 600);
+    padding: 0.5rem;
+  }
+  .subtitle {
+    @include font-face($font-nunito, $text-xs, 600);
+    opacity: 0.6;
+  }
+  .button {
+    padding-top: 2rem;
+    .title {
+      @include font-face($font-G8, $text-md, 600);
+      padding: 0.5rem;
+    }
+  }
+}
+
+@include mq($breakpoint-tablet-landscape) {
+  .section__listCard {
+    
+    .container {
+      gap: 3rem;
+    }
+  }
+}
+
+@include mq($breakpoint-tablet) {
+  .section__listCard {
+    
+    .container {
+      gap: 2rem;
+    }
+  }
+}
+
+@include mq($breakpoint-mobile-landscape) {
+  .section__listCard {
+    
+    .container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

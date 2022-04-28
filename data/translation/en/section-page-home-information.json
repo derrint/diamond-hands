@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "Join the Pre-sale & Lottery Event!",
+    "description": "Top up DIH token and get our presale Diamond Lootbox. Start from 10 DIH, you can get an NFT card and lottery ticket!",
+    "image": "ImageYouWin",
+    "url_caption": "Go to Marketplace",
+    "url": "/marketplace"
+  },
+  {
+    "id": 2,
+    "title": "DIH & DD Token",
+    "description": "DIH (Diamond Hands) is our native currency that can be used to purchase Lootbox to make you earned  NFT card and DD. DD is our in-game currency.",
+    "image": "ImageMyCardLibrary",
+    "url_caption": "Learn more about our tokens",
+    "url": "/token"
+  },
+  {
+    "id": 3,
+    "title": "Collect & Level Up Your NFT Card",
+    "description": "Compete with other players around the world with your NFT Card. Grow your card by win the set and earn more DIH. You can easily collect and trade your NFT Card!",
+    "image": "ImageBattle",
+    "url_caption": "Learn more about the NFT Card",
+    "url": "/learn"
+  },
+  {
+    "id": 4,
+    "title": "Place the bet, Play & Earn",
+    "description": "In our coming up game, you can earn DIH and exchange your earning with the real life dollars!",
+    "image": "ImageChooseBetLevel",
+    "url_caption": "Learn more about the game",
+    "url": "/learn"
+  }
+]

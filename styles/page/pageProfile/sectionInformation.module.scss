@@ -1,0 +1,121 @@
+@import '../../theme',
+        '../../helper';
+
+.section__information {
+  margin-bottom: 10rem;
+  .container {
+    position: relative;
+    
+    .wrapper {
+      border-radius: 24px;
+      padding: 2.5rem;
+      background: #FFFFFF80;
+      box-shadow: 0px 0px 48px 0px #0000000D;
+      width: 100%;
+      max-width: 524px;
+
+      h1 {
+        @include font-face($font-G8, $text-2xl, 700);
+        color:  $color-secondary-blue-75;
+        margin-bottom: 2rem;
+
+        img {
+          object-fit: contain;
+          margin-right: 1rem;
+        }
+      }
+
+      .currentDD {
+        &_label {
+          @include font-face($font-nunito, $text-md, 600);
+        }
+
+        &_value {
+          @include font-face($font-nunito, $text-2xl, 800);
+          color:  $color-primary-blue;
+        }
+      }
+
+      .earnedDD {
+        &_label {
+          @include font-face($font-nunito, $text-md, 600);
+        }
+
+        &_value {
+          @include font-face($font-nunito, $text-lg, 800);
+          color:  $color-primary-blue;
+        }
+      }
+
+      .detailDD {
+        background: #FCF7E4;
+        border-radius: 8px;
+        
+        &_label {
+          @include font-face($font-nunito, $text-sm, 400);
+        }
+
+        &_value {
+          @include font-face($font-nunito, $text-sm, 800);
+          color:  $color-primary-blue;
+        }
+
+        &_desc {
+          @include font-face($font-nunito, $text-sm, 400);
+        }
+      }
+      .myCards {
+        &_label {
+          @include font-face($font-nunito, $text-md, 600);
+          color:  $color-secondary-blue-75;
+        }
+
+        &_value {
+          @include font-face($font-nunito, $text-2xl, 800);
+          color:  $color-primary-blue;
+        }
+
+        &_description {
+          @include font-face($font-nunito, $text-sm, 400);
+          color: #0C353B99;
+          margin-top: 10px; 
+        }
+      }
+
+      
+    }
+  }
+}
+
+.modal {
+  h1 {
+    @include font-face($font-G8, $text-2xl, 700);
+    color:  $color-secondary-blue-75;
+    margin-bottom: 3rem;
+  }
+
+  .table {
+    &_wrapper {
+      @include font-face($font-nunito, $text-sm, 400);
+      color:  $color-secondary-blue-75;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.5);
+      box-shadow: 0px 0px 48px rgba(0, 0, 0, 0.05);
+      border-radius: 24px;
+    }
+    &_header_row {
+      border-bottom: 1px solid rgba(28, 93, 121, 0.4);
+    }
+  }
+}
+
+@include mq($breakpoint-tablet) {
+  .section__information {
+    .container {
+      .wrapper {
+        width: 100%;
+      }
+    }
+  }
+
+}

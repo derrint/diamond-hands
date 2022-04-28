@@ -1,0 +1,5 @@
+# Player Register
+GET https://diamondhandsapi.candlestick.com/api/PlayerRegister
+    ?userName=yoga%20nugraha
+    &email=yoganugraha89@gmail.com
+    &password=pass12345678

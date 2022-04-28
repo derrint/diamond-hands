@@ -1,0 +1,173 @@
+[
+  {
+    "periode": "This month",
+    "rank": "90",
+    "battle_point": "21.500",
+    "player": [
+      {
+        "id": 1,
+        "name": "Wade Waren",
+        "battle_point": "40.232"
+      },
+      {
+        "id": 2,
+        "name": "Pablo Nino",
+        "battle_point": "39.232"
+      },
+      {
+        "id": 3,
+        "name": "Rasoul Khatibi",
+        "battle_point": "36.232"
+      },
+      {
+        "id": 4,
+        "name": "Michael Fox",
+        "battle_point": "35.232"
+      },
+      {
+        "id": 5,
+        "name": "Lebron James",
+        "battle_point": "32.232"
+      },
+      {
+        "id": 6,
+        "name": "Freddy Adu",
+        "battle_point": "30.232"
+      },
+      {
+        "id": 7,
+        "name": "Niklas Barkouth",
+        "battle_point": "27.232"
+      },
+      {
+        "id": 8,
+        "name": "Sam Dala Bona",
+        "battle_point": "26.232"
+      },
+      {
+        "id": 9,
+        "name": "Zion Wiliamson",
+        "battle_point": "25.232"
+      },
+      {
+        "id": 10,
+        "name": "Kurniawan",
+        "battle_point": "23.232"
+      }
+    ]
+  },
+  {
+    "periode": "This Week",
+    "rank": "90",
+    "battle_point": "21.500",
+    "player": [
+      {
+        "id": 1,
+        "name": "Wade Waren",
+        "battle_point": "40.232"
+      },
+      {
+        "id": 2,
+        "name": "Pablo Nino",
+        "battle_point": "39.232"
+      },
+      {
+        "id": 3,
+        "name": "Rasoul Khatibi",
+        "battle_point": "36.232"
+      },
+      {
+        "id": 4,
+        "name": "Michael Fox",
+        "battle_point": "35.232"
+      },
+      {
+        "id": 5,
+        "name": "Lebron James",
+        "battle_point": "32.232"
+      },
+      {
+        "id": 6,
+        "name": "Freddy Adu",
+        "battle_point": "30.232"
+      },
+      {
+        "id": 7,
+        "name": "Niklas Barkouth",
+        "battle_point": "27.232"
+      },
+      {
+        "id": 8,
+        "name": "Sam Dala Bona",
+        "battle_point": "26.232"
+      },
+      {
+        "id": 9,
+        "name": "Zion Wiliamson",
+        "battle_point": "25.232"
+      },
+      {
+        "id": 10,
+        "name": "Kurniawan",
+        "battle_point": "23.232"
+      }
+    ]
+  },
+  {
+    "periode": "All Time",
+    "rank": "90",
+    "battle_point": "21.500",
+    "player": [
+      {
+        "id": 1,
+        "name": "Wade Waren",
+        "battle_point": "40.232"
+      },
+      {
+        "id": 2,
+        "name": "Pablo Nino",
+        "battle_point": "39.232"
+      },
+      {
+        "id": 3,
+        "name": "Rasoul Khatibi",
+        "battle_point": "36.232"
+      },
+      {
+        "id": 4,
+        "name": "Michael Fox",
+        "battle_point": "35.232"
+      },
+      {
+        "id": 5,
+        "name": "Lebron James",
+        "battle_point": "32.232"
+      },
+      {
+        "id": 6,
+        "name": "Freddy Adu",
+        "battle_point": "30.232"
+      },
+      {
+        "id": 7,
+        "name": "Niklas Barkouth",
+        "battle_point": "27.232"
+      },
+      {
+        "id": 8,
+        "name": "Sam Dala Bona",
+        "battle_point": "26.232"
+      },
+      {
+        "id": 9,
+        "name": "Zion Wiliamson",
+        "battle_point": "25.232"
+      },
+      {
+        "id": 10,
+        "name": "Kurniawan",
+        "battle_point": "23.232"
+      }
+    ]
+  }
+]

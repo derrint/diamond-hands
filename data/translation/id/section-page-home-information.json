@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "Win and earn $DIH",
+    "description": "Win the battle and earn crypto on the table. Use your earning to buy more cards on our marketplace. If you lose, don’t worry, you can always try and bet, again and again!",
+    "image": "ImageYouWin",
+    "url_caption": "Learn more about $DIH",
+    "url": "/learn"
+  },
+  {
+    "id": 2,
+    "title": "Get your own card!",
+    "description": "Diamond Hands have more than 100 collectible cards with varying rarity accross category. Each NFT card is handcrafted by our artisan.",
+    "image": "ImageMyCardLibrary",
+    "url_caption": "Buy at marketplace",
+    "url": "/marketplace"
+  },
+  {
+    "id": 3,
+    "title": "Place your bet",
+    "description": "Starts from only $10! And earn as much as possible. You can easily top up you wallet via Metamask.",
+    "image": "ImageChooseBetLevel",
+    "url_caption": "",
+    "url": ""
+  },
+  {
+    "id": 4,
+    "title": "Match & battle with opponent",
+    "description": "Diamond hands will search opponent that has same amount to bet with you. So, get ready to have a fierce battle againts others! ",
+    "image": "ImageBattle",
+    "url_caption": "",
+    "url": ""
+  }
+]

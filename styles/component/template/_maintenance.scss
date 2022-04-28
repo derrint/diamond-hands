@@ -1,0 +1,20 @@
+@import '../../theme',
+        '../../helper';
+.page-error-maintenance {
+  .img {
+    width: 100%;
+    max-width: 360px;
+  }
+  h1 {
+    @include font-face($font-nunito, $text-4xl, 700);
+    color: $color-secondary-blue-75;
+  }
+  span {
+    @include font-face($font-nunito, $text-md, 600);
+    color: $color-secondary-blue-75;
+  }
+  .link {
+    color: #1FA3DC;
+    @include font-face($font-nunito, $text-md, 700);
+  }
+}

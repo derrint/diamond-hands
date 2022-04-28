@@ -1,0 +1,279 @@
+[
+  {
+    "id": 1,
+    "category": "General",
+    "messages": [
+      {
+        "subject": "Frankenstein card level up",
+        "have_subject" : true,
+        "read": true,
+        "card": "https://diamondhandsapi.candlestick.com/upload/skins/106215761000792067.png", 
+        "description": "Congrats your Frankenstein card has been level up to level 5 and the Decay effect is activated. if you doesn't login and use your card in 3 days th total EXP will be decayed by 5%, and after that, it will continue decay every 24 hours by 3% of 789 EXP."
+      },
+      {
+        "subject": "Frankenstein card level up",
+        "have_subject" : true,
+        "read": true,
+        "card": "https://diamondhandsapi.candlestick.com/upload/skins/106215761000792067.png", 
+        "description": "Don't you miss Yoyoboy? Your Yoyoboy have decayed by 75%. You miss the chance to level up G■O Let the battle begin and gain more EXP today! "
+      },
+      {
+        "subject": "",
+        "have_subject" : true,
+        "read": true,
+        "card": "https://diamondhandsapi.candlestick.com/upload/skins/106215761000792067.png", 
+        "description": "Congrats your Frankenstein card has been level up to level 5 and the Decay effect is activated. if you doesn't login and use your card in 3 days th total EXP will be decayed by 5%, and after that, it will continue decay every 24 hours by 3% of 789 EXP."
+      },
+      {
+        "subject": "Autotron card decayed",
+        "have_subject" : true,
+        "read": true,
+        "card": "https://diamondhandsapi.candlestick.com/upload/skins/106215761000792067.png", 
+        "description": "Don't you miss Autotron? Your Autotron have decayed by 20%. You miss the chance to level up ‘1) Let the battle begin and gain more EXP today!"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "category": "Daily quest",
+    "messages": [
+      {
+        "subject": "Frankenstein card level up",
+        "have_subject" : true,
+        "read": true,
+        "card": "https://diamondhandsapi.candlestick.com/upload/skins/106215761000792067.png", 
+        "description": "Congrats your Frankenstein card has been level up to level 5 and the Decay effect is activated. if you doesn't login and use your card in 3 days th total EXP will be decayed by 5%, and after that, it will continue decay every 24 hours by 3% of 789 EXP."
+      },
+      {
+        "subject": "Frankenstein card level up",
+        "have_subject" : true,
+        "read": true,
+        "card": "https://diamondhandsapi.candlestick.com/upload/skins/106215761000792067.png", 
+        "description": "Don't you miss Yoyoboy? Your Yoyoboy have decayed by 75%. You miss the chance to level up G■O Let the battle begin and gain more EXP today! "
+      },
+      {
+        "subject": "",
+        "have_subject" : true,
+        "read": true,
+        "card": "https://diamondhandsapi.candlestick.com/upload/skins/106215761000792067.png", 
+        "description": "Congrats your Frankenstein card has been level up to level 5 and the Decay effect is activated. if you doesn't login and use your card in 3 days th total EXP will be decayed by 5%, and after that, it will continue decay every 24 hours by 3% of 789 EXP."
+      },
+      {
+        "subject": "Autotron card decayed",
+        "have_subject" : true,
+        "read": true,
+        "card": "https://diamondhandsapi.candlestick.com/upload/skins/106215761000792067.png", 
+        "description": "Don't you miss Autotron? Your Autotron have decayed by 20%. You miss the chance to level up ‘1) Let the battle begin and gain more EXP today!"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "category": "Payment",
+    "messages": [
+      {
+        "id": 3,
+        "subject": "USDC Transaction Tracking",
+        "have_subject" : true,
+        "read": false,
+        "description": "Transfer ID: TF_DZ089980999003  -  100 USDC  -  From: DamianRezza 089980999",
+        "trasnfer_id": "TF_DZ089980999003",
+        "from": "DamianRezza",
+        "number": "089980999",
+        "rate": "1 USD = 1 USDC",
+        "fee": 3.85,
+        "amount": 100,
+        "currency_from" : "USD",
+        "currency_to" : "USDC",
+        "track": [
+          {
+            "id": 3,
+            "date": "2021-10-09T11:02:00.000Z",
+            "description": "Processing Deposit",
+            "status": "onproses",
+            "step": "proses"
+          },
+          {
+            "id": 2,
+            "date": "2021-10-09T11:02:00.000Z",
+            "description": "Processing Exchange",
+            "status": "done",
+            "step": "proses"
+          },
+          {
+            "id": 1,
+            "date": "2021-10-09T11:02:00.000Z",
+            "description": "Initiating transfer",
+            "status": "done",
+            "step": "initiate"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "subject": "USDC Transaction Tracking",
+        "have_subject" : true,
+        "read": true,
+        "description": "Transfer ID: TF_DZ089980999002  -  200 USDC  -  From: DamianRezza 089980999",
+        "trasnfer_id": "TF_DZ089980999002",
+        "from": "DamianRezza",
+        "number": "089980999",
+        "rate": "1 USD = 1 USDC",
+        "fee": 3.85,
+        "amount": 200,
+        "currency_from" : "USD",
+        "currency_to" : "USDC",
+        "track": [
+          {
+            "id": 3,
+            "date": "2021-10-09T11:02:00.000Z",
+            "description": "Processing Deposit",
+            "status": "done",
+            "step": "proses"
+          },
+          {
+            "id": 2,
+            "date": "2021-10-09T11:02:00.000Z",
+            "description": "Processing Exchange",
+            "status": "done",
+            "step": "proses"
+          },
+          {
+            "id": 1,
+            "date": "2021-10-09T11:02:00.000Z",
+            "description": "Initiating transfer",
+            "status": "done",
+            "step": "initiate"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "subject": "USDC Transaction Tracking",
+        "have_subject" : true,
+        "read": true,
+        "description": "Transfer ID: TF_DZ089980999001  -  95 USDC  -  From: DamianRezza 089980999",
+        "trasnfer_id": "TF_DZ089980999001",
+        "from": "DamianRezza",
+        "number": "089980999",
+        "rate": "1 USD = 1 USDC",
+        "fee": 3.85,
+        "amount": 95,
+        "currency_from" : "USD",
+        "currency_to" : "USDC",
+        "track": [
+          {
+            "id": 3,
+            "date": "2021-10-09T11:02:00.000Z",
+            "description": "Processing Deposit",
+            "status": "done",
+            "step": "proses"
+          },
+          {
+            "id": 2,
+            "date": "2021-10-09T11:02:00.000Z",
+            "description": "Processing Exchange",
+            "status": "done",
+            "step": "proses"
+          },
+          {
+            "id": 1,
+            "date": "2021-10-09T11:02:00.000Z",
+            "description": "Initiating transfer",
+            "status": "done",
+            "step": "initiate"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "category": "Card updates",
+    "messages": [
+      {
+        "subject": "Frankenstein card level up",
+        "have_subject" : true,
+        "read": false,
+        "card": "https://diamondhandsapi.candlestick.com/upload/skins/106215761000792067.png", 
+        "description": "Congrats your Frankenstein card has been level up to level 5 and the Decay effect is activated. if you doesn't login and use your card in 3 days th total EXP will be decayed by 5%, and after that, it will continue decay every 24 hours by 3% of 789 EXP."
+      },
+      {
+        "subject": "Frankenstein card level up",
+        "have_subject" : true,
+        "read": false,
+        "card": "https://diamondhandsapi.candlestick.com/upload/skins/106215761000792067.png", 
+        "description": "Don't you miss Yoyoboy? Your Yoyoboy have decayed by 75%. You miss the chance to level up G■O Let the battle begin and gain more EXP today! "
+      },
+      {
+        "subject": "",
+        "have_subject" : true,
+        "read": true,
+        "card": "https://diamondhandsapi.candlestick.com/upload/skins/106215761000792067.png", 
+        "description": "Congrats your Frankenstein card has been level up to level 5 and the Decay effect is activated. if you doesn't login and use your card in 3 days th total EXP will be decayed by 5%, and after that, it will continue decay every 24 hours by 3% of 789 EXP."
+      },
+      {
+        "subject": "",
+        "have_subject" : true,
+        "read": true,
+        "card": "https://diamondhandsapi.candlestick.com/upload/skins/106215761000792067.png", 
+        "description": "Congrats your Frankenstein card has been level up to level 5 and the Decay effect is activated. if you doesn't login and use your card in 3 days th total EXP will be decayed by 5%, and after that, it will continue decay every 24 hours by 3% of 789 EXP."
+      },
+      {
+        "subject": "",
+        "have_subject" : true,
+        "read": true,
+        "card": "https://diamondhandsapi.candlestick.com/upload/skins/106215761000792067.png", 
+        "description": "Congrats your Frankenstein card has been level up to level 5 and the Decay effect is activated. if you doesn't login and use your card in 3 days th total EXP will be decayed by 5%, and after that, it will continue decay every 24 hours by 3% of 789 EXP."
+      },
+      {
+        "subject": "",
+        "have_subject" : true,
+        "read": true,
+        "card": "https://diamondhandsapi.candlestick.com/upload/skins/106215761000792067.png", 
+        "description": "Congrats your Frankenstein card has been level up to level 5 and the Decay effect is activated. if you doesn't login and use your card in 3 days th total EXP will be decayed by 5%, and after that, it will continue decay every 24 hours by 3% of 789 EXP."
+      },
+      {
+        "subject": "Autotron card decayed",
+        "have_subject" : true,
+        "read": true,
+        "card": "https://diamondhandsapi.candlestick.com/upload/skins/106215761000792067.png", 
+        "description": "Don't you miss Autotron? Your Autotron have decayed by 20%. You miss the chance to level up ‘1) Let the battle begin and gain more EXP today!"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "category": "Weekly resume",
+    "messages": [
+      {
+        "subject": "Frankenstein card level up",
+        "have_subject" : true,
+        "read": false,
+        "card": "https://diamondhandsapi.candlestick.com/upload/skins/106215761000792067.png", 
+        "description": "Congrats your Frankenstein card has been level up to level 5 and the Decay effect is activated. if you doesn't login and use your card in 3 days th total EXP will be decayed by 5%, and after that, it will continue decay every 24 hours by 3% of 789 EXP."
+      },
+      {
+        "subject": "Frankenstein card level up",
+        "have_subject" : true,
+        "read": false,
+        "card": "https://diamondhandsapi.candlestick.com/upload/skins/106215761000792067.png", 
+        "description": "Don't you miss Yoyoboy? Your Yoyoboy have decayed by 75%. You miss the chance to level up G■O Let the battle begin and gain more EXP today! "
+      },
+      {
+        "subject": "",
+        "have_subject" : true,
+        "read": true,
+        "card": "https://diamondhandsapi.candlestick.com/upload/skins/106215761000792067.png", 
+        "description": "Congrats your Frankenstein card has been level up to level 5 and the Decay effect is activated. if you doesn't login and use your card in 3 days th total EXP will be decayed by 5%, and after that, it will continue decay every 24 hours by 3% of 789 EXP."
+      },
+      {
+        "subject": "Autotron card decayed",
+        "have_subject" : true,
+        "read": true,
+        "card": "https://diamondhandsapi.candlestick.com/upload/skins/106215761000792067.png", 
+        "description": "Don't you miss Autotron? Your Autotron have decayed by 20%. You miss the chance to level up ‘1) Let the battle begin and gain more EXP today!"
+      }
+    ]
+  }
+]

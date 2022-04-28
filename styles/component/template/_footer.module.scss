@@ -1,0 +1,119 @@
+footer {
+  background: #F8E9C8;
+  position: relative;
+  padding: 20px 0;
+
+  &.error-page {
+    background: transparent !important;
+  }
+  .left-side {
+    .copyright {
+      @include font-face($font-G8, $text-sm, 400);
+    }
+    .menu {
+      a {
+        @include font-face($font-G8, $text-sm, 600);
+        color: $color-secondary-blue-50;
+      
+        &:hover, svg:hover {
+          color: $color-subsidiary-blue-25;
+        }
+      }
+    }
+  }
+
+  .right-side {
+    .social-button svg{
+      color: #F8E9C8;
+      background-color: $color-primary-blue;
+      border-radius: 50%;
+      padding: 5px;
+    }
+  }
+
+  &.is-home {
+    background: #04364Baa;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 0;
+    
+    .left-side {
+      .copyright {
+        color: #ffffffee;
+      }
+      .menu {
+        a {
+          color: #ffffffee;
+        
+          &:hover, svg:hover {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+
+    .right-side {
+      .social-button svg{
+        color: #04364B;
+        background-color: #ffffffee;
+      }
+    }
+  }
+
+  &.mobile-only {
+    background: none;
+    position: absolute;
+    bottom: 2rem;
+    width: calc(100% - 4rem);
+    padding-bottom: 10px;
+
+    .container {
+      padding: 0;
+    }
+
+    .left-side {
+      margin-bottom: 0;
+      
+      .copyright {
+        color: $color-primary-blue;
+        font-size: $text-2xs;
+      }
+      .menu {
+        display: flex;
+        margin-left: 0;
+
+        a {
+          color: $color-primary-blue;
+          font-size: $text-2xs;
+        
+          &:hover, svg:hover {
+            color: $color-primary-blue;
+          }
+        }
+      }
+    }
+
+    .right-side {
+      .social-button svg{
+        color: $color-secondary-blue-25;
+        background-color: $color-primary-blue;
+      }
+    }
+  }
+}
+
+@include mq($breakpoint-tablet-landscape) {
+  footer {
+    .left-side {
+      .copyright {
+        font-size: $text-xs;
+      }
+      .menu {
+        a {
+          font-size: $text-xs;
+        }
+      }
+    }
+  }
+}

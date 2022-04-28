@@ -1,0 +1,7 @@
+@import '../../theme';
+
+.Toastify__toast{
+  &-body {
+    @include font-face($font-nunito !important, $text-lg, 400);
+  }
+}

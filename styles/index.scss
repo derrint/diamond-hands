@@ -1,0 +1,30 @@
+// @import 'tailwindcss/base';
+// @import 'tailwindcss/components';
+// @import 'tailwindcss/utilities';
+
+// Import css files
+// @import "~slick-carousel/slick/slick.scss";
+// @import "~slick-carousel/slick/slick-theme.scss";
+@import '~swiper/swiper-bundle.min.css';
+// @import '~swiper/components/navigation/navigation.scss';
+// @import '~swiper/components/pagination/pagination.scss';
+// @import '~swiper/components/effect-cube/effect-cube.scss';
+// @import '~swiper/components/thumbs/thumbs.scss ';
+
+// Typhography
+@import 'typography';
+
+// Theme
+@import 'theme';
+
+// Helper
+@import 'helper';
+
+// Base
+@import 'base';
+
+// Component
+@import 'component';
+
+// Component
+@import 'library';

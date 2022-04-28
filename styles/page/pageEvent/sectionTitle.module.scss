@@ -1,0 +1,50 @@
+@import '../../theme',
+        '../../helper';
+
+.section__title {
+  margin: 3rem;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: 50%;
+    top: 123px;
+    transform: translate(-50%, 0);
+    background: #1FA3DC;
+    opacity: 0.4;
+    filter: blur(150px);
+    border-radius: 50%;
+  }
+  &.backdrop::before {
+    background: transparent;
+  }
+  h1 {
+    @include font-face($font-G8, $text-4xl, 700);
+    color:  $color-secondary-blue-75;
+  }
+}
+
+@include mq($breakpoint-tablet) {
+  .section__title {
+    margin-bottom: 3rem;
+
+    h1 {
+      font-size: $text-3xl;
+    }
+  }
+}
+
+@include mq($breakpoint-mobile) {
+  .section__title {
+    margin-bottom: 2rem;
+
+    h1 {
+      font-size: $text-2xl;
+    }
+
+    h3 {
+      font-size: $text-md;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@import '../../theme',
+        '../../helper';
+
+.section__status {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: 50%;
+    top: 123px;
+    transform: translate(-50%, 0);
+    background: #1FA3DC;
+    opacity: 0.4;
+    filter: blur(150px);
+    border-radius: 50%;
+  }
+
+  .icon {
+    width: 80px;
+  }
+  
+  h1 {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    @include font-face($font-nunito, $text-xl, 700);
+    color: $color-secondary-blue-75;
+  }
+  .text {
+    @include font-face($font-nunito, $text-xs, 400);
+    color: $color-secondary-blue-75;
+  }
+  .btnText {
+    @include font-face($font-nunito, $text-xs, 600);
+    color: #1FA3DC;
+  }
+}

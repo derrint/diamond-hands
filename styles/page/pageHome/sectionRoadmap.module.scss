@@ -1,0 +1,144 @@
+@import '../../theme',
+        '../../helper';
+
+.section__roadmap {
+  .container {
+
+    h1 {
+      @include font-face($font-G8, $text-4xl, 700);
+      color: $color-secondary-blue-75;
+    }
+
+    .itemWrapper {
+      // display: flex;
+      // flex-direction: row;
+      // gap: 2.4rem;
+      // overflow-x: scroll;
+      
+      // /* Hide scrollbar for IE, Edge and Firefox */
+      // -ms-overflow-style: none;  /* IE and Edge */
+      // scrollbar-width: none;  /* Firefox */
+
+      // /* Hide scrollbar for Chrome, Safari and Opera */
+      // &::-webkit-scrollbar {
+      //   display: none;
+      // }
+    }
+
+    .item {
+      min-width: 320px;
+      min-height: 280px;
+      background: rgba(12, 53, 59, 0.1);
+      border-radius: 16px;
+      padding: 24px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      text-align: left;
+
+      // &:first-of-type {
+      //   margin-left: 2rem;
+      // }
+
+      // &:last-of-type {
+      //   margin-right: 2rem;
+      // }
+
+      h2 {
+        @include font-face($font-G8, $text-3xl, 700);
+        color: $color-primary-white;
+        margin-bottom: 8px;
+      }
+      h3 {
+        @include font-face($font-nunito, $text-2xl, 700);
+        color: $color-secondary-blue-75;
+        margin-bottom: 8px;
+      }
+      h4 {
+        @include font-face($font-nunito, $text-sm, 700);
+        color: $color-primary-white;
+        margin-bottom: 24px;
+      }
+      p {
+        @include font-face($font-nunito, $text-md, 400);
+        color: $color-secondary-blue-75;
+      }
+
+    }
+
+    .nextPrevWrapper {
+      justify-content: center;
+      text-align: center;
+      display: none;
+      flex-direction: row;
+      gap: 3rem;
+    }
+    
+  }
+}
+
+@include mq($breakpoint-tablet-landscape) {
+  .section__roadmap {
+    .container {
+      min-height: 350px;
+
+      .item {
+        min-width: unset;
+        min-height: 320px;
+      }
+
+      .nextPrevWrapper {
+        display: flex;
+      }
+
+      h2 {
+        font-size: $text-3xl;
+      }
+
+      .image__card {
+        width: 25vw;
+      }
+    }
+  }
+}
+
+@include mq($breakpoint-tablet) {
+  .section__roadmap {
+    .container {
+      gap: 2rem;
+      min-height: 250px;
+      padding: 2rem;
+
+      .item {
+        min-height: 400px;
+      }
+
+      h2 {
+        font-size: $text-2xl;
+      }
+
+      .image__card {
+        width: 25vw;
+      }
+    }
+  }
+}
+
+@include mq($breakpoint-mobile) {
+  .section__roadmap {
+    .container {
+      padding-bottom: 15rem;
+
+      h2 {
+        font-size: $text-2xl;
+        // padding: 0 2rem;
+      }
+
+      .image__card {
+        width: 200px;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -3rem;
+      }
+    }
+  }
+}

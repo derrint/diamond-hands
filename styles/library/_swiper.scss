@@ -1,0 +1,25 @@
+.swiper-button{
+  &-prev,
+  &-next{
+
+    &:after{
+      font-size: $text-2xl;
+      // background: $color-secondary-black-75;
+      border-radius: 100%;
+      padding: 15px;
+      width: 8px;
+      height: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $color-secondary-blue-50;
+    }
+  }
+  &-prev{
+    left: -5rem;
+  }
+  &-next{
+    right: -5rem;
+  }
+  
+}
